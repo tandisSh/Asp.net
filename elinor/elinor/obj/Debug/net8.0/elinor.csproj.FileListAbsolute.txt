@@ -1029,3 +1029,4 @@ C:\Users\User\Desktop\elinor\elinor\elinor\obj\Debug\net8.0\elinor.dll
 C:\Users\User\Desktop\elinor\elinor\elinor\obj\Debug\net8.0\refint\elinor.dll
 C:\Users\User\Desktop\elinor\elinor\elinor\obj\Debug\net8.0\elinor.pdb
 C:\Users\User\Desktop\elinor\elinor\elinor\obj\Debug\net8.0\ref\elinor.dll
+C:\Users\User\Desktop\elinor\elinor\elinor\obj\Debug\net8.0\elinor.sourcelink.json
