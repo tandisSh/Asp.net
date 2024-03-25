@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qWhovUbuplce8donLObxXai3wIPmPEaajQbMGEvu0wI=",
+  "Hash": "jAFjkI0HscT0TQa/Dz74ar7KZbxjWmbwXMArkVgLXPE=",
   "Source": "elinor",
   "BasePath": "/",
   "Mode": "Root",
@@ -7900,6 +7900,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\icon-192.png"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\elinor\\elinor\\elinor\\wwwroot\\img\\carousel-1.jpg",
+      "SourceId": "elinor",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\elinor\\elinor\\elinor\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "img/carousel-1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\carousel-1.jpg"
     },
     {
       "Identity": "C:\\Users\\User\\Desktop\\elinor\\elinor\\elinor\\wwwroot\\index.html",
