@@ -395,3 +395,31 @@ code {
     background-color: unset;
 }
 
+/*hhn*/
+
+.SvgsGroups[data-v-3dbb5f6f] {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 65%;
+    gap: 64px;
+    margin: 6rem auto;
+    justify-items: center;
+}
+.SvgsGroups div[data-v-3dbb5f6f] {
+    transform: scale(1.2);
+    text-align: center;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.SvgsGroups > div > span {
+    font-size: 13px;
+}
+.SvgsGroups path, .SvgsGroups .mainsvgcolor, .SvgsGroups .mainsvgcolor, .SvgsGroups rect {
+    fill: #b92c2c;
+}
+.SvgsGroups svg{
+    fill:black;
+}
