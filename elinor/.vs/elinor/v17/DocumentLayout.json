@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\elinor\\elinor\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D3369B28-682A-465A-B7B1-C9E845B08295}|elinor\\elinor.csproj|c:\\users\\user\\desktop\\elinor\\elinor\\elinor\\wwwroot\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{D3369B28-682A-465A-B7B1-C9E845B08295}|elinor\\elinor.csproj|solutionrelative:elinor\\wwwroot\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{D3369B28-682A-465A-B7B1-C9E845B08295}|elinor\\elinor.csproj|c:\\users\\user\\desktop\\elinor\\elinor\\elinor\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D3369B28-682A-465A-B7B1-C9E845B08295}|elinor\\elinor.csproj|solutionrelative:elinor\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3369B28-682A-465A-B7B1-C9E845B08295}|elinor\\elinor.csproj|c:\\users\\user\\desktop\\elinor\\elinor\\elinor\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3369B28-682A-465A-B7B1-C9E845B08295}|elinor\\elinor.csproj|solutionrelative:elinor\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D3369B28-682A-465A-B7B1-C9E845B08295}|elinor\\elinor.csproj|c:\\users\\user\\desktop\\elinor\\elinor\\elinor\\layout\\body.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D3369B28-682A-465A-B7B1-C9E845B08295}|elinor\\elinor.csproj|solutionrelative:elinor\\layout\\body.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3369B28-682A-465A-B7B1-C9E845B08295}|elinor\\elinor.csproj|c:\\users\\user\\desktop\\elinor\\elinor\\elinor\\wwwroot\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{D3369B28-682A-465A-B7B1-C9E845B08295}|elinor\\elinor.csproj|solutionrelative:elinor\\wwwroot\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3369B28-682A-465A-B7B1-C9E845B08295}|elinor\\elinor.csproj|c:\\users\\user\\desktop\\elinor\\elinor\\elinor\\layout\\header.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D3369B28-682A-465A-B7B1-C9E845B08295}|elinor\\elinor.csproj|solutionrelative:elinor\\layout\\header.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3369B28-682A-465A-B7B1-C9E845B08295}|elinor\\elinor.csproj|c:\\users\\user\\desktop\\elinor\\elinor\\elinor\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D3369B28-682A-465A-B7B1-C9E845B08295}|elinor\\elinor.csproj|solutionrelative:elinor\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,30 +34,82 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\elinor\\elinor\\elinor\\wwwroot\\index.html",
+              "RelativeDocumentMoniker": "elinor\\wwwroot\\index.html",
+              "ToolTip": "C:\\Users\\User\\Desktop\\elinor\\elinor\\elinor\\wwwroot\\index.html",
+              "RelativeToolTip": "elinor\\wwwroot\\index.html",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-03-28T18:28:04.733Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\elinor\\elinor\\elinor\\Program.cs",
+              "RelativeDocumentMoniker": "elinor\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\elinor\\elinor\\elinor\\Program.cs",
+              "RelativeToolTip": "elinor\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-28T18:27:33.218Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Header.razor",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\elinor\\elinor\\elinor\\Layout\\Header.razor",
+              "RelativeDocumentMoniker": "elinor\\Layout\\Header.razor",
+              "ToolTip": "C:\\Users\\User\\Desktop\\elinor\\elinor\\elinor\\Layout\\Header.razor",
+              "RelativeToolTip": "elinor\\Layout\\Header.razor",
+              "ViewState": "AQIAADIAAAAAAAAAAAAmwDUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-27T18:54:44.892Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\elinor\\elinor\\elinor\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "elinor\\Layout\\MainLayout.razor",
+              "ToolTip": "C:\\Users\\User\\Desktop\\elinor\\elinor\\elinor\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "elinor\\Layout\\MainLayout.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-27T18:16:18.181Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Body.razor",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\elinor\\elinor\\elinor\\Layout\\Body.razor",
               "RelativeDocumentMoniker": "elinor\\Layout\\Body.razor",
               "ToolTip": "C:\\Users\\User\\Desktop\\elinor\\elinor\\elinor\\Layout\\Body.razor",
               "RelativeToolTip": "elinor\\Layout\\Body.razor",
-              "ViewState": "AQIAACQAAAAAAAAAAAAAAC8AAAA8AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-03-24T18:31:39.283Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "app.css",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\elinor\\elinor\\elinor\\wwwroot\\css\\app.css",
               "RelativeDocumentMoniker": "elinor\\wwwroot\\css\\app.css",
               "ToolTip": "C:\\Users\\User\\Desktop\\elinor\\elinor\\elinor\\wwwroot\\css\\app.css",
               "RelativeToolTip": "elinor\\wwwroot\\css\\app.css",
-              "ViewState": "AQIAAHkBAAAAAAAAAAAuwIcBAAASAAAA",
+              "ViewState": "AQIAAJ0BAAAAAAAAAAAAwKkBAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-03-23T10:56:27.473Z",
               "EditorCaption": ""
