@@ -1,0 +1,93 @@
+html, body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    direction:rtl;
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    opacity: .99;
+    position: relative;
+    width: 88%;
+    margin: auto;
+    margin-top:20px;
+}
+#logo{
+    margin-top:10px;
+ }
+.header-top{
+    display:flex;
+    justify-content:space-between;
+    gap:100px;
+}
+#search-box {
+    display: flex;
+    flex-basis: 50%;
+    margin-top:5px;
+}
+#search-main {
+    flex-direction: column;
+    align-items: center;
+   
+}
+#glass-input {
+    background-color: #f5f5f5;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    padding: 10px 8px;
+    width:700px;
+}
+.icon{
+    cursor:pointer;
+    border:unset;
+}
+.search-input{
+    background-color: transparent;
+    flex-grow: 1;
+    border: unset;
+}
+.header_buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+    cursor:pointer;
+}
+.cart__button {
+    position: relative;
+    width: 45px;
+    border:unset;
+    background-color:#fff;
+}
+#login-btn {
+    border-radius: 28px;
+    background-color: #e35f83;
+    color: #fff;
+    font-size: 15px;
+    padding: 6px 24px;
+    width: 130px;
+    height: 40px;
+}
+#header-menu{
+    margin-right:20px;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}
+.main-menu {
+    display: flex;
+    gap: 20px;
+}
+.menu-item {
+    display: block;
+    font-size: 16px;
+    padding: .8rem .8rem .5rem;
+    border-radius: 10px 10px 0 0;
+}
+.menu-item a{
+    text-decoration:none;
+    color:black;
+}
