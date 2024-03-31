@@ -157,8 +157,11 @@ html, body {
     display: flex;
 
 }
-#nav-text:hover{
+#nav-text{
     color: #e35f83;
+}
+#nav-text:hover{
+    color: black;
 }
 
 .navbar p{
@@ -166,8 +169,71 @@ html, body {
     font-family: "IranSans";
 }
 
+.product__gallery__images[data-v-cd74b5da] {
+    width: 100px;
+    height: 95%;
+    overflow: auto;
+    padding: .2rem;
+}
 
+.product__gallery__images__item[data-v-cd74b5da] {
+    cursor: pointer;
+
+}
+.product__gallery img[data-v-cd74b5da] {
+    max-width: 100%;
+    max-height: 100%;
+}
+.product__gallery__images__item img[data-v-cd74b5da] {
+    border-radius: 10px;
+}
+#main-2{
+    margin-right: 10%;
+    margin-top: 4%;
+}
+
+.product__gallery__main__image img[data-v-cd74b5da], .product__gallery__images__item img[data-v-cd74b5da] {
+    border-radius: 10px;
+}
+.product{
+    display: flex;
+}
 
 
 
 /* main end */
+
+
+
+
+
+
+/* main footer */
+/* .SvgsGroups[data-v-3dbb5f6f] {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 65%;
+    gap: 64px;
+    margin: 6rem auto;
+    justify-items: center;
+}
+.SvgsGroups div[data-v-3dbb5f6f] {
+    transform: scale(1.2);
+    text-align: center;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.SvgsGroups > div > span {
+    font-size: 13px;
+}
+.SvgsGroups path, .SvgsGroups .mainsvgcolor, .SvgsGroups .mainsvgcolor, .SvgsGroups rect {
+    fill: #b92c2c;
+}
+.SvgsGroups svg{
+    fill:black;
+} */
+
+/* end main footer */
