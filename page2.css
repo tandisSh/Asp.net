@@ -382,7 +382,7 @@ svg.selectedColorSvg[data-v-f0f5fe86] {
 
 
 /* main footer */
-/* .SvgsGroups[data-v-3dbb5f6f] {
+.SvgsGroups[data-v-3dbb5f6f] {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     width: 65%;
@@ -407,6 +407,109 @@ svg.selectedColorSvg[data-v-f0f5fe86] {
 }
 .SvgsGroups svg{
     fill:black;
-} */
+}
 
 /* end main footer */
+
+/* footer */
+.d-flex {
+    display: flex !important;
+}
+.footer {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    color: #000;
+    background-color: #fff2f8;
+    bottom: 0;
+    width:100%;
+}
+.footer a {
+        text-decoration: none;
+        color: #000;
+}
+.content-footer {
+    width: 85%;
+    margin: auto;
+}
+.top-footer {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e7d9d9;
+    padding: 50px 0;
+    gap: 200px;
+}
+
+.send-email {
+    background-color: #e35f83;
+    color: #fff;
+    padding: 12px 75px;
+    height: 100%;
+    font-weight: 800;
+    position: relative;
+    cursor: pointer;
+    border:1px solid #e35f83;
+    border-radius:5px;
+    border-radius:5px;
+}
+
+.subscrib-email{
+    flex-grow: 1;
+}
+.email-form {
+    gap: 140px;
+    align-items: center;
+    justify-content: space-between;
+}
+#email-form-input{
+        outline: none;
+        background-color: transparent;
+        border: unset;
+        border-bottom: 1px solid #e7d9d9;
+        width: 60%;
+        padding: 12px 8px;
+        margin-left:60px;
+    }
+.down-footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+    margin-top: 30px;
+    border-bottom: 1px solid #e7d9d9;
+    padding-bottom:30px;
+}
+.line2 {
+    height: max-content;
+
+}
+.down-left {
+    display:flex;
+    justify-content:space-between;
+}
+.menu-fuuter li {
+    list-style-type: none;
+}
+.menu-fuuter a:hover {
+    color:#e35f83;
+}
+.font2{
+    font-weight:bold;
+    margin-right:38px;
+}
+.socialMedia{
+    display:flex;
+    gap:30px;
+}
+.down-about {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    border-bottom: 1px solid #e7d9d9;
+    padding-bottom: 30px;
+}
+.footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+/* end footer */
