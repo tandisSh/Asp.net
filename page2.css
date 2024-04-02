@@ -353,6 +353,25 @@ svg.selectedColorSvg[data-v-f0f5fe86] {
 
 
 /* end price */
+#speci-name p {
+    font-size: 14px;
+    color: #e35f83;
+    padding-bottom: 10%;
+
+}
+#speci-name{
+    width: 20%;
+}
+
+#special{
+    width: 80%;
+}
+#special p {
+    font-size: 14px;
+    padding-bottom: 2.5%;
+
+}
+
 
 
 /* main end */
