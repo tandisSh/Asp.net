@@ -208,7 +208,7 @@ code {
     border-radius: 20px;
     z-index: 11000 !important;
 }
-li[data-v-1ad98523] {
+li{
     display: block;
     font-size: 16px !important;
     padding: .8rem .8rem .5rem;
@@ -329,40 +329,40 @@ li[data-v-1ad98523] {
 /*mainpageBody*/
 
 /*product section*/
-.has-padding[data-v-0ce0d99f] {
+.has-padding{
     padding: 0 6rem;
 }
-.products__home[data-v-6e63b2b6] {
+.products__home{
     position: relative;
     font-size: 1.8rem;
     padding-top: 5rem !important;
 }
-.products__home__top[data-v-6e63b2b6] {
+.products__home__top{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 }
-.products__home__products[data-v-6e63b2b6] {
+.products__home__products{
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
     margin-top: 5rem;
     gap: 1rem;
 }
-.image-product[data-v-5be2f538] {
+.image-product{
     transition: all .5s;
 }
-.product:hover .image-product[data-v-5be2f538] {
+.product:hover .image-product{
     transform: scale(1.2);
 }
-.product__image[data-v-5be2f538] {
+.product__image{
     overflow: hidden;
     position: relative;
     border-radius: 10px 10px 0 0;
     padding: 5px;
     background-color: var(--bg-footer);
 }
-.img__holder[data-v-5be2f538] {
+.img__holder{
     position: relative;
     overflow: hidden;
     border-radius: inherit;
@@ -380,7 +380,7 @@ li[data-v-1ad98523] {
     cursor: pointer;
     background-color:unset;
 }
-.products__home__more[data-v-6e63b2b6] {
+.products__home__more{
     margin-top: 2.5rem;
     display: flex;
     justify-content: center;
@@ -403,7 +403,7 @@ li[data-v-1ad98523] {
 .type-price {
     font-size: 15px;
 }
-.product[data-v-5be2f538] {
+.product{
     background-color: #fff2f8 !important;
     border-radius:5px;
 }
@@ -432,7 +432,7 @@ li[data-v-1ad98523] {
 
 /*hhn*/
 
-.SvgsGroups[data-v-3dbb5f6f] {
+.SvgsGroups{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     width: 65%;
@@ -440,7 +440,7 @@ li[data-v-1ad98523] {
     margin: 6rem auto;
     justify-items: center;
 }
-.SvgsGroups div[data-v-3dbb5f6f] {
+.SvgsGroups div{
     transform: scale(1.2);
     text-align: center;
     display: flex;
