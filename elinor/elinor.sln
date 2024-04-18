@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "elinor", "elinor\elinor.csproj", "{D3369B28-682A-465A-B7B1-C9E845B08295}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElinorStoreServer", "ElinorStoreServer\ElinorStoreServer.csproj", "{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D3369B28-682A-465A-B7B1-C9E845B08295}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3369B28-682A-465A-B7B1-C9E845B08295}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3369B28-682A-465A-B7B1-C9E845B08295}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

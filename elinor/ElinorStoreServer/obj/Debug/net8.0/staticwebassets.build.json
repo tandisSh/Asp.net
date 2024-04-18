@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "7WYgatfCEg4joYL9eQqHOf+YWXsyolH0J2TOGdln8Yo=",
+  "Source": "ElinorStoreServer",
+  "BasePath": "_content/ElinorStoreServer",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

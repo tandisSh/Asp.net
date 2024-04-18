@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "elinor",
   "resources": {
-    "hash": "sha256-0OR0QGbrW252Sez6EjZhsMO6eikyizoJlfbJ1dfntLs=",
+    "hash": "sha256-AnM28YWtbLhrZeozI9H8m+3T/HRvDz4bmkM1QQVwUZE=",
     "jsModuleNative": {
       "dotnet.native.8.0.2.ehfkinuhs4.js": "sha256-gPMK16QWoJSTxorlZJqcVtbBRTniIQWlLsJN2O4cJHg="
     },
@@ -17,10 +17,6 @@
       "icudt_no_CJK.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
     },
     "assembly": {
-      "Blazorise.wasm": "sha256-chc0dQsAahoWY9KxLGmnYUmjnSl+yYd06KAwtbb0w7E=",
-      "Blazorise.Bootstrap.wasm": "sha256-j2CZnEVMXai9nksqWN+Mbx3A+T+bhdC1fOOIidFs2k0=",
-      "Blazorise.Icons.FontAwesome.wasm": "sha256-L1RKGf+Van7PXJXMQ3uoq5nGy0wQSetuhtKv83X5Qh8=",
-      "Blazorise.Licensing.wasm": "sha256-vmNGzxXoM2MA6rFUp99OvXbE3FJlYnUDr6zyA1Nc3Xc=",
       "Microsoft.AspNetCore.Authorization.wasm": "sha256-xpsdU9uDJz5t2/e+ZH5CkB8nfZeCmSo9PqwquQX4B2U=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-buD5cBBc62HWdCjvn6Z3Zo39W90qvd5Wk6QfHoBzWqw=",
       "Microsoft.AspNetCore.Components.Forms.wasm": "sha256-K/+6c3zlmAc3Y2qud/ksu/AexTbQpjbOhmTw03Ttg7E=",
@@ -212,10 +208,10 @@
       "mscorlib.wasm": "sha256-OH3kXneWqQMz6CUSo6POZqIeMqn9+5RR+IgHn5TnIwA=",
       "netstandard.wasm": "sha256-ZOswxXEbR2TmqjpbaBEdgr85Bv1NC4GwOwoJ+oxXM3M=",
       "System.Private.CoreLib.wasm": "sha256-I2w0iHf5nvSQyF1YE1VbgdTzmmz6a4OE6J7vo5wFa/4=",
-      "elinor.wasm": "sha256-FglfAyhIqDPKiq0jEtOngbf/+0DBkxPsOywFeILiRdU="
+      "elinor.wasm": "sha256-uEMlXGBaI4tYhJSo93fstephQtlkjo3TKXGSKuycjbE="
     },
     "pdb": {
-      "elinor.pdb": "sha256-3yWX6yuTWpUkuSKy9GvFiAF15nwy7bNBhkqSaQsYaZU="
+      "elinor.pdb": "sha256-HeN1fy8FXICYSD/b7VlG9OmYPsKzmIpTGhRDGbum/KE="
     }
   },
   "cacheBootResources": true,
