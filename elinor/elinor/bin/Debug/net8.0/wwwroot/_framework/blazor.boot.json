@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "elinor",
   "resources": {
-    "hash": "sha256-AnM28YWtbLhrZeozI9H8m+3T/HRvDz4bmkM1QQVwUZE=",
+    "hash": "sha256-LLUp4aWNAqN+I1qvJEFOi/5X4eBmc3vx+tOgAgfHk4I=",
     "jsModuleNative": {
       "dotnet.native.8.0.2.ehfkinuhs4.js": "sha256-gPMK16QWoJSTxorlZJqcVtbBRTniIQWlLsJN2O4cJHg="
     },
@@ -208,10 +208,10 @@
       "mscorlib.wasm": "sha256-OH3kXneWqQMz6CUSo6POZqIeMqn9+5RR+IgHn5TnIwA=",
       "netstandard.wasm": "sha256-ZOswxXEbR2TmqjpbaBEdgr85Bv1NC4GwOwoJ+oxXM3M=",
       "System.Private.CoreLib.wasm": "sha256-I2w0iHf5nvSQyF1YE1VbgdTzmmz6a4OE6J7vo5wFa/4=",
-      "elinor.wasm": "sha256-uEMlXGBaI4tYhJSo93fstephQtlkjo3TKXGSKuycjbE="
+      "elinor.wasm": "sha256-nMFH/I55eiiiWISUkcdYYGVxIZRDoiLiwKIcMhUKZ6I="
     },
     "pdb": {
-      "elinor.pdb": "sha256-HeN1fy8FXICYSD/b7VlG9OmYPsKzmIpTGhRDGbum/KE="
+      "elinor.pdb": "sha256-gJRgbR8BkQ7I4PIRKEE+/GAvVV7NAGYshtRrADCVzmc="
     }
   },
   "cacheBootResources": true,

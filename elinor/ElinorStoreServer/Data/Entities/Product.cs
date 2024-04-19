@@ -8,5 +8,7 @@
         public int Price { get; set; }
         public DateTime CreatedAt { get; set; }
         public string ImageFileName { get; set;}
+        public int Number { get; set; }
+        public string Category { get; set; }
     }
 }
