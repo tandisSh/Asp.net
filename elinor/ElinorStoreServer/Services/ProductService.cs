@@ -2,7 +2,7 @@
 using ElinorStoreServer.Data.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace IbulakStoreServer.Services
+namespace ElinorStoreServer.Services
 {
     public class ProductService
     {

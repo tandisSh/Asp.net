@@ -26,6 +26,7 @@ builder.Services.AddDbContext<StoreDbContext>(options =>
 
 
 builder.Services.AddScoped<ProductService>();
+builder.Services.AddScoped<CategoryService>();
 
 var app = builder.Build();
 
