@@ -1,4 +1,7 @@
-﻿namespace ElinorStoreServer.Data.Entities
+﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace ElinorStoreServer.Data.Entities
 {
     public class Product
     {
@@ -8,7 +11,10 @@
         public int Price { get; set; }
         public DateTime CreatedAt { get; set; }
         public string ImageFileName { get; set;}
-        public int Number { get; set; }
-        public string Category { get; set; }
+        public int count { get; set; }
+        [ForeignKey("category")]
+        public int CategoryId { get; set; }
+
+        public virtual Category Category { get; set;}
     }
 }
