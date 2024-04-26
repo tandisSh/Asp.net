@@ -1,8 +1,8 @@
-﻿using IbulakStoreServer.Data.Entities;
-using IbulakStoreServer.Services;
+﻿using ElinorStoreServer.Data.Entities;
+using ElinorStoreServer.Services;
 using Microsoft.AspNetCore.Mvc;
 
-namespace IbulakStoreServer.Controllers
+namespace ElinorStoreServer.Controllers
 {
     [Route("[controller]")]
     [ApiController]
