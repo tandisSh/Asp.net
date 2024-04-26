@@ -177,7 +177,7 @@ namespace ElinorStoreServer.Migrations
                         .IsRequired();
 
                     b.HasOne("ElinorStoreServer.Data.Entities.User", "User")
-                        .WithMany()
+                        .WithMany("Orders")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -206,6 +206,8 @@ namespace ElinorStoreServer.Migrations
             modelBuilder.Entity("ElinorStoreServer.Data.Entities.User", b =>
                 {
                     b.Navigation("Baskets");
+
+                    b.Navigation("Orders");
                 });
 #pragma warning restore 612, 618
         }
