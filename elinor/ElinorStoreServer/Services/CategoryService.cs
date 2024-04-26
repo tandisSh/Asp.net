@@ -40,6 +40,7 @@ namespace ElinorStoreServer.Services
             }
 
             oldCategory.Name = Category.Name;
+            oldCategory.ImageFileName = Category.ImageFileName;
             _context.Categorys.Update(oldCategory);
             await _context.SaveChangesAsync();
         }
