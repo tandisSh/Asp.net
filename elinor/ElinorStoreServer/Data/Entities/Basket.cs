@@ -18,7 +18,7 @@ namespace ElinorStoreServer.Data.Entities
         public virtual User User { get; set; } = default!;
         public virtual Product Product { get; set; } = default!;
         // Changed the type of UsertId to int
-        public int UsertId { get; set; }
+     
 
        
     }

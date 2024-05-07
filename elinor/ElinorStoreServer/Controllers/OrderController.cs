@@ -2,6 +2,7 @@
 using ElinorStoreServer.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using share.Models.Order;
 
 namespace ElinorStoreServer.Controllers
 {
@@ -41,12 +42,13 @@ namespace ElinorStoreServer.Controllers
             return Ok(result);
         }
         [HttpPost]
-        public async Task<IActionResult> Add(Order order)
+        public async Task<IActionResult> Add(OrderAddRequestDto order)
         {
             await _OrderService.AddAsync(order);
             return Ok();
         }
         [HttpPut]
+
         public async Task<IActionResult> Edit([FromBody] Order order)
         {
             await _OrderService.EditAsync(order);

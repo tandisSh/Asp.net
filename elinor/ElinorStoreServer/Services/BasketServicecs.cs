@@ -1,6 +1,7 @@
 ﻿using ElinorStoreServer.Data.Domain;
 using ElinorStoreServer.Data.Entities;
 using Microsoft.EntityFrameworkCore;
+using share.Models.Basket;
 
 namespace ElinorStoreServer.Services
 {
@@ -35,8 +36,15 @@ namespace ElinorStoreServer.Services
             List<Basket> baskets = await _context.Baskets.Where(basket => basket.userId == userId).ToListAsync();
             return basket;
         }
-        public async Task AddAsync(Basket basket)
+        public async Task AddAsync(BasketAddRequestDto model)
         {
+            Basket basket = new Basket
+            {
+                UserId = model.UserId,
+                Count = model.Count,
+                ProductId = model.ProductId,
+            };
+
             _context.Baskets.Add(basket);
             await _context.SaveChangesAsync();
         }
@@ -63,6 +71,11 @@ namespace ElinorStoreServer.Services
             }
             _context.Baskets.Remove(basket);
             await _context.SaveChangesAsync();
+        }
+
+        internal async Task AddAsync(Basket basket)
+        {
+            throw new NotImplementedException();
         }
     }
 }

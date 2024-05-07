@@ -1,6 +1,7 @@
 ﻿using ElinorStoreServer.Data.Domain;
 using ElinorStoreServer.Data.Entities;
 using Microsoft.EntityFrameworkCore;
+using share.Models.User;
 
 namespace ElinorStoreServer.Services
 {
@@ -21,8 +22,14 @@ namespace ElinorStoreServer.Services
             List<User> users = await _context.Users.ToListAsync();
             return users;
         }
-        public async Task AddAsync(User user)
+        public async Task AddAsync(UserAddRequestDto model)
         {
+            User user = new User
+            {
+                Name = model.Name,
+                LastName = model.LastName,
+            };
+
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
         }

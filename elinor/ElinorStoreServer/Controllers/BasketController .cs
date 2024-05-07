@@ -2,6 +2,7 @@
 using ElinorStoreServer.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using share.Models.Basket;
 
 namespace ElinorStoreServer.Controllers
 
@@ -42,7 +43,7 @@ namespace ElinorStoreServer.Controllers
             return Ok(result);
         }
         [HttpPost]
-        public async Task<IActionResult> Add(Basket basket)
+        public async Task<IActionResult> Add(BasketAddRequestDto basket)
         {
             await _BasketService.AddAsync(basket);
             return Ok();

@@ -3,6 +3,7 @@ using ElinorStoreServer.Data.Entities;
 using ElinorStoreServer.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using share.Models.Category;
 
 namespace IbulakStoreServer.Controllers
 {
@@ -30,7 +31,7 @@ namespace IbulakStoreServer.Controllers
             return Ok(result);
         }
         [HttpPost]
-        public async Task<IActionResult> Add(Category Category)
+        public async Task<IActionResult> Add(CategoryAddRequestDto Category)
         {
             await _CategoryService.AddAsync(Category);
             return Ok();

@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "ElinorStoreServer.Controllers.FileController",
+    "Method": "Post",
+    "RelativePath": "api/File",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "File",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ElinorStoreServer.Controllers.BasketController",
     "Method": "Gets",
     "RelativePath": "Basket",
@@ -19,7 +35,7 @@
     "Parameters": [
       {
         "Name": "basket",
-        "Type": "ElinorStoreServer.Data.Entities.Basket",
+        "Type": "share.Models.Basket.BasketAddRequestDto",
         "IsRequired": true
       }
     ],
@@ -125,7 +141,7 @@
     "Parameters": [
       {
         "Name": "Category",
-        "Type": "ElinorStoreServer.Data.Entities.Category",
+        "Type": "share.Models.Category.CategoryAddRequestDto",
         "IsRequired": true
       }
     ],
@@ -199,7 +215,7 @@
     "Parameters": [
       {
         "Name": "order",
-        "Type": "ElinorStoreServer.Data.Entities.Order",
+        "Type": "share.Models.Order.OrderAddRequestDto",
         "IsRequired": true
       }
     ],
@@ -305,7 +321,7 @@
     "Parameters": [
       {
         "Name": "product",
-        "Type": "ElinorStoreServer.Data.Entities.Product",
+        "Type": "share.Models.Product.ProductAddRequestDto",
         "IsRequired": true
       }
     ],
@@ -379,7 +395,7 @@
     "Parameters": [
       {
         "Name": "user",
-        "Type": "ElinorStoreServer.Data.Entities.User",
+        "Type": "share.Models.User.UserAddRequestDto",
         "IsRequired": true
       }
     ],

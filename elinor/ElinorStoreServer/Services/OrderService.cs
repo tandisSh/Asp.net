@@ -1,6 +1,7 @@
 ﻿using ElinorStoreServer.Data.Domain;
 using ElinorStoreServer.Data.Entities;
 using Microsoft.EntityFrameworkCore;
+using share.Models.Order;
 
 namespace ElinorStoreServer.Services
 {
@@ -27,16 +28,25 @@ namespace ElinorStoreServer.Services
         }
         public async Task<List<Order>> GetsByProductAsync(int productId)
         {
-            List<Order> orders = await _context.Orders.Where(order => order.productId == productId).ToListAsync();
+            List<Order> orders = await _context.Orders.Where(order => order.ProductId == productId).ToListAsync();
             return order;
         }
         public async Task<List<Order>> GetsByUserAsync(int userId)
         {
-            List<Order> orders = await _context.Orders.Where(order => order.userId == userId).ToListAsync();
+            List<Order> orders = await _context.Orders.Where(order => order.UserId == userId).ToListAsync();
             return order;
         }
-        public async Task AddAsync(Order order)
+        public async Task AddAsync(OrderAddRequestDto model)
         {
+            Order order = new Order
+            {
+
+                UserId = model.UserId,
+                Price = model.Price,
+                Count = model.Count,
+                ProductId = model.ProductId,
+
+            };
             _context.Orders.Add(order);
             await _context.SaveChangesAsync();
         }

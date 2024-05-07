@@ -1,6 +1,7 @@
 ﻿using ElinorStoreServer.Data.Domain;
 using ElinorStoreServer.Data.Entities;
 using Microsoft.EntityFrameworkCore;
+using share.Models.Product;
 
 namespace ElinorStoreServer.Services
 {
@@ -26,8 +27,21 @@ namespace ElinorStoreServer.Services
             List<Product> products = await _context.Products.ToListAsync();
             return products;
         }
-        public async Task AddAsync(Product product)
+        public async Task AddAsync(ProductAddRequestDto model)
         {
+            Product product = new Product
+            {
+
+                Name = model.Name,
+                Description = model.Description,
+                Price = model.Price,
+                CreatedAt = model.CreatedAt,
+                ImageFileName = model.ImageFileName,
+                count = model.count,
+                CategoryId = model.CategoryId,
+
+            };
+
             _context.Products.Add(product);
             await _context.SaveChangesAsync();
         }

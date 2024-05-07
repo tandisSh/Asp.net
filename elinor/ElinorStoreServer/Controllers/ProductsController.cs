@@ -35,6 +35,7 @@ using ElinorStoreServer.Data.Entities;
 using ElinorStoreServer.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using share.Models.Product;
 
 namespace IbulakStoreServer.Controllers
 {
@@ -62,7 +63,7 @@ namespace IbulakStoreServer.Controllers
             return Ok(result);
         }
         [HttpPost]
-        public async Task<IActionResult> Add(Product product)
+        public async Task<IActionResult> Add(ProductAddRequestDto product)
         {
             await _productService.AddAsync(product);
             return Ok();

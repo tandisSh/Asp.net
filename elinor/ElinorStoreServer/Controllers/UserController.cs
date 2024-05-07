@@ -1,6 +1,7 @@
 ﻿using ElinorStoreServer.Data.Entities;
 using ElinorStoreServer.Services;
 using Microsoft.AspNetCore.Mvc;
+using share.Models.User;
 
 namespace ElinorStoreServer.Controllers
 {
@@ -29,7 +30,7 @@ namespace ElinorStoreServer.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Add(User user)
+        public async Task<IActionResult> Add(UserAddRequestDto user)
         {
             await _userService.AddAsync(user);
             return Ok();

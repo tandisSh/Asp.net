@@ -1,0 +1,13 @@
+C:\Users\User\Desktop\elinor\elinor\share\bin\Debug\net8.0\share.deps.json
+C:\Users\User\Desktop\elinor\elinor\share\bin\Debug\net8.0\share.dll
+C:\Users\User\Desktop\elinor\elinor\share\bin\Debug\net8.0\share.pdb
+C:\Users\User\Desktop\elinor\elinor\share\obj\Debug\net8.0\share.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\elinor\elinor\share\obj\Debug\net8.0\share.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\elinor\elinor\share\obj\Debug\net8.0\share.AssemblyInfo.cs
+C:\Users\User\Desktop\elinor\elinor\share\obj\Debug\net8.0\share.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\elinor\elinor\share\obj\Debug\net8.0\share.sourcelink.json
+C:\Users\User\Desktop\elinor\elinor\share\obj\Debug\net8.0\share.dll
+C:\Users\User\Desktop\elinor\elinor\share\obj\Debug\net8.0\refint\share.dll
+C:\Users\User\Desktop\elinor\elinor\share\obj\Debug\net8.0\share.pdb
+C:\Users\User\Desktop\elinor\elinor\share\obj\Debug\net8.0\ref\share.dll
+C:\Users\User\Desktop\elinor\elinor\share\obj\Debug\net8.0\share.csproj.AssemblyReference.cache

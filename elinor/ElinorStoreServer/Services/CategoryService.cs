@@ -1,12 +1,15 @@
 ﻿using ElinorStoreServer.Data.Domain;
 using ElinorStoreServer.Data.Entities;
 using Microsoft.EntityFrameworkCore;
+using share.Models.Basket;
+using share.Models.Category;
 
 namespace ElinorStoreServer.Services
 {
     public class CategoryService
     {
         private readonly StoreDbContext _context;
+        public int ProductId { get; private set; }
         public CategoryService(StoreDbContext context)
         {
             _context = context;
@@ -26,9 +29,17 @@ namespace ElinorStoreServer.Services
             List<Category> Categorys = await _context.Categorys.ToListAsync();
             return Categorys;
         }
-        public async Task AddAsync(Category Category)
+        public async Task AddAsync(CategoryAddRequestDto model)
         {
-            _context.Categorys.Add(Category);
+            Category category = new Category
+            {
+         
+                ImageFileName = model.ImageFileName,
+                Name = model.Name,
+                
+            };
+
+            _context.Categorys.Add(category);
             await _context.SaveChangesAsync();
         }
         public async Task EditAsync(Category Category)
