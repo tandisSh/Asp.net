@@ -85,7 +85,7 @@ namespace ElinorStoreServer.Controllers
 
             _context.Orders.AddRange(orderEntities);
             await _context.SaveChangesAsync();
-            return Ok();
+            return Ok("مبارکه!");
         }
 
 
@@ -101,13 +101,13 @@ namespace ElinorStoreServer.Controllers
         public async Task<IActionResult> Edit([FromBody] Order order)
         {
             await _OrderService.EditAsync(order);
-            return Ok();
+            return Ok("تغییرت انجام شد عزیزم.");
         }
         [HttpDelete]
         public async Task<IActionResult> Delete(int id)
         {
             await _OrderService.DeleteAsync(id);
-            return Ok();
+            return Ok("محصول و از دست دادی!");
         }
     }
 }
