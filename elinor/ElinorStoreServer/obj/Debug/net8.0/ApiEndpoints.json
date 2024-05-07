@@ -207,22 +207,6 @@
   },
   {
     "ContainingType": "ElinorStoreServer.Controllers.OrderController",
-    "Method": "Add",
-    "RelativePath": "Order",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "order",
-        "Type": "share.Models.Order.OrderAddRequestDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ElinorStoreServer.Controllers.OrderController",
     "Method": "Edit",
     "RelativePath": "Order",
     "HttpMethod": "PUT",
@@ -264,6 +248,22 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ElinorStoreServer.Controllers.OrderController",
+    "Method": "AddRange",
+    "RelativePath": "Order/AddRange",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orders",
+        "Type": "System.Collections.Generic.List\u00601[[share.Models.Order.OrderAddRequestDto, share, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "IsRequired": true
       }
     ],

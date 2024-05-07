@@ -3,64 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\elinor\\elinor\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|c:\\users\\user\\desktop\\elinor\\elinor\\elinorstoreserver\\controllers\\basketcontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|solutionrelative:elinorstoreserver\\controllers\\basketcontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|c:\\users\\user\\desktop\\elinor\\elinor\\elinorstoreserver\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|solutionrelative:elinorstoreserver\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|c:\\users\\user\\desktop\\elinor\\elinor\\elinorstoreserver\\controllers\\filecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|solutionrelative:elinorstoreserver\\controllers\\filecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|c:\\users\\user\\desktop\\elinor\\elinor\\elinorstoreserver\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|solutionrelative:elinorstoreserver\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|c:\\users\\user\\desktop\\elinor\\elinor\\elinorstoreserver\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|solutionrelative:elinorstoreserver\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|c:\\users\\user\\desktop\\elinor\\elinor\\elinorstoreserver\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|solutionrelative:elinorstoreserver\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|c:\\users\\user\\desktop\\elinor\\elinor\\elinorstoreserver\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|solutionrelative:elinorstoreserver\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|c:\\users\\user\\desktop\\elinor\\elinor\\elinorstoreserver\\data\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|solutionrelative:elinorstoreserver\\data\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF843F7E-5638-4816-A940-3DBC3752D7EE}|share\\share.csproj|c:\\users\\user\\desktop\\elinor\\elinor\\share\\models\\category\\categoryaddrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF843F7E-5638-4816-A940-3DBC3752D7EE}|share\\share.csproj|solutionrelative:share\\models\\category\\categoryaddrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|c:\\users\\user\\desktop\\elinor\\elinor\\elinorstoreserver\\data\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|solutionrelative:elinorstoreserver\\data\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|c:\\users\\user\\desktop\\elinor\\elinor\\elinorstoreserver\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|solutionrelative:elinorstoreserver\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|c:\\users\\user\\desktop\\elinor\\elinor\\elinorstoreserver\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|solutionrelative:elinorstoreserver\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|c:\\users\\user\\desktop\\elinor\\elinor\\elinorstoreserver\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|solutionrelative:elinorstoreserver\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|c:\\users\\user\\desktop\\elinor\\elinor\\elinorstoreserver\\services\\basketservicecs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|solutionrelative:elinorstoreserver\\services\\basketservicecs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF843F7E-5638-4816-A940-3DBC3752D7EE}|share\\share.csproj|c:\\users\\user\\desktop\\elinor\\elinor\\share\\models\\user\\useraddrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF843F7E-5638-4816-A940-3DBC3752D7EE}|share\\share.csproj|solutionrelative:share\\models\\user\\useraddrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|c:\\users\\user\\desktop\\elinor\\elinor\\elinorstoreserver\\data\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|solutionrelative:elinorstoreserver\\data\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,201 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BasketController .cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Controllers\\BasketController .cs",
-              "RelativeDocumentMoniker": "ElinorStoreServer\\Controllers\\BasketController .cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Controllers\\BasketController .cs",
-              "RelativeToolTip": "ElinorStoreServer\\Controllers\\BasketController .cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAgwDIAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T19:28:43.476Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CategoryController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Controllers\\CategoryController.cs",
-              "RelativeDocumentMoniker": "ElinorStoreServer\\Controllers\\CategoryController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Controllers\\CategoryController.cs*",
-              "RelativeToolTip": "ElinorStoreServer\\Controllers\\CategoryController.cs*",
-              "ViewState": "AQIAABkAAAAAAAAAAAAYwCEAAABCAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T19:28:32.777Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FileController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Controllers\\FileController.cs",
-              "RelativeDocumentMoniker": "ElinorStoreServer\\Controllers\\FileController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Controllers\\FileController.cs",
-              "RelativeToolTip": "ElinorStoreServer\\Controllers\\FileController.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T19:28:23.493Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "OrderController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Controllers\\OrderController.cs",
-              "RelativeDocumentMoniker": "ElinorStoreServer\\Controllers\\OrderController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Controllers\\OrderController.cs",
-              "RelativeToolTip": "ElinorStoreServer\\Controllers\\OrderController.cs",
-              "ViewState": "AQIAACYAAAAAAAAAAAAkwCwAAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T19:28:11.996Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ProductsController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Controllers\\ProductsController.cs",
-              "RelativeDocumentMoniker": "ElinorStoreServer\\Controllers\\ProductsController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Controllers\\ProductsController.cs",
-              "RelativeToolTip": "ElinorStoreServer\\Controllers\\ProductsController.cs",
-              "ViewState": "AQIAAEcAAAAAAAAAAAAkwEEAAABBAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T19:27:52.833Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "ElinorStoreServer\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Controllers\\UserController.cs",
-              "RelativeToolTip": "ElinorStoreServer\\Controllers\\UserController.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAgwCAAAABDAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T19:25:42.163Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Data\\Entities\\User.cs",
-              "RelativeDocumentMoniker": "ElinorStoreServer\\Data\\Entities\\User.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Data\\Entities\\User.cs",
-              "RelativeToolTip": "ElinorStoreServer\\Data\\Entities\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T19:25:21.343Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CategoryAddRequestDto.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\elinor\\elinor\\share\\Models\\Category\\CategoryAddRequestDto.cs",
-              "RelativeDocumentMoniker": "share\\Models\\Category\\CategoryAddRequestDto.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\elinor\\elinor\\share\\Models\\Category\\CategoryAddRequestDto.cs",
-              "RelativeToolTip": "share\\Models\\Category\\CategoryAddRequestDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T19:24:40.569Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Category.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Data\\Entities\\Category.cs",
-              "RelativeDocumentMoniker": "ElinorStoreServer\\Data\\Entities\\Category.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Data\\Entities\\Category.cs",
-              "RelativeToolTip": "ElinorStoreServer\\Data\\Entities\\Category.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T19:24:18.147Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ProductService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Services\\ProductService.cs",
-              "RelativeDocumentMoniker": "ElinorStoreServer\\Services\\ProductService.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Services\\ProductService.cs",
-              "RelativeToolTip": "ElinorStoreServer\\Services\\ProductService.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAkwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T19:23:19.01Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
               "Title": "OrderService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Services\\OrderService.cs",
               "RelativeDocumentMoniker": "ElinorStoreServer\\Services\\OrderService.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Services\\OrderService.cs",
               "RelativeToolTip": "ElinorStoreServer\\Services\\OrderService.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAowAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC0AAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T19:23:11.792Z",
+              "WhenOpened": "2024-05-07T20:14:53.585Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "BasketServicecs.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Services\\BasketServicecs.cs",
-              "RelativeDocumentMoniker": "ElinorStoreServer\\Services\\BasketServicecs.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Services\\BasketServicecs.cs",
-              "RelativeToolTip": "ElinorStoreServer\\Services\\BasketServicecs.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAowAAAAAAAAAAA",
+              "DocumentIndex": 2,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Data\\Entities\\Order.cs",
+              "RelativeDocumentMoniker": "ElinorStoreServer\\Data\\Entities\\Order.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Data\\Entities\\Order.cs",
+              "RelativeToolTip": "ElinorStoreServer\\Data\\Entities\\Order.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAxwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T19:23:01.618Z",
+              "WhenOpened": "2024-05-07T20:01:58.036Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "ElinorStoreServer\\Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Services\\UserService.cs",
-              "RelativeToolTip": "ElinorStoreServer\\Services\\UserService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAqAAAA",
+              "DocumentIndex": 0,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "ElinorStoreServer\\Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "ElinorStoreServer\\Controllers\\OrderController.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAswEYAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T19:21:24.458Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "UserAddRequestDto.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\elinor\\elinor\\share\\Models\\User\\UserAddRequestDto.cs",
-              "RelativeDocumentMoniker": "share\\Models\\User\\UserAddRequestDto.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\elinor\\elinor\\share\\Models\\User\\UserAddRequestDto.cs",
-              "RelativeToolTip": "share\\Models\\User\\UserAddRequestDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T19:21:12.467Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "CategoryService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Services\\CategoryService.cs",
-              "RelativeDocumentMoniker": "ElinorStoreServer\\Services\\CategoryService.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Services\\CategoryService.cs",
-              "RelativeToolTip": "ElinorStoreServer\\Services\\CategoryService.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAA1wCQAAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T19:10:28.577Z",
+              "WhenOpened": "2024-05-07T19:43:02.99Z",
               "EditorCaption": ""
             }
           ]

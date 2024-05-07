@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ElinorStoreServer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+87de1b2f521be35350389bb4ce843312c0158d14")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b4acc296bf757c3e8a86115d13b3c66a80ffeaa0")]
 [assembly: System.Reflection.AssemblyProductAttribute("ElinorStoreServer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ElinorStoreServer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

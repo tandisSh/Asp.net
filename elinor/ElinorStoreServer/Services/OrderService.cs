@@ -36,20 +36,33 @@ namespace ElinorStoreServer.Services
             List<Order> orders = await _context.Orders.Where(order => order.UserId == userId).ToListAsync();
             return order;
         }
-        public async Task AddAsync(OrderAddRequestDto model)
+        public async Task AddAsync(Order order)
         {
-            Order order = new Order
-            {
-
-                UserId = model.UserId,
-                Price = model.Price,
-                Count = model.Count,
-                ProductId = model.ProductId,
-
-            };
             _context.Orders.Add(order);
             await _context.SaveChangesAsync();
+         
         }
+
+        public async Task AddRangeAsync(List<OrderAddRequestDto> orders)
+        {
+            var order = orders.Select(orderDto => new Order
+            {
+
+                Count = orderDto.Count,
+                Price = orderDto.Price,
+                ProductId = orderDto.ProductId,
+                UserId = orderDto.UserId,
+            
+            }).ToList();
+
+            _context.Orders.AddRange(order);
+            await _context.SaveChangesAsync();
+        }
+
+
+
+
+
         public async Task EditAsync(Order order)
         {
             Order? oldOrder = await _context.Orders.FindAsync(order.Id);
