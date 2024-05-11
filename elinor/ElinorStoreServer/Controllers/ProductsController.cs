@@ -37,6 +37,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using share.Models.Product;
 
+
+
 namespace IbulakStoreServer.Controllers
 {
     [Route("[controller]")]
@@ -62,6 +64,13 @@ namespace IbulakStoreServer.Controllers
             var result = await _productService.GetsAsync();
             return Ok(result);
         }
+        [HttpGet("Search")]
+        public async Task<IActionResult> Search([FromQuery] SearchRequestDto model)
+        {
+            var result = await _productService.SearchAsync(model);
+            return Ok(result);
+        }
+
         [HttpPost]
         public async Task<IActionResult> Add(ProductAddRequestDto product)
         {
