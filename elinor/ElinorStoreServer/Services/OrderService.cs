@@ -2,6 +2,7 @@
 using ElinorStoreServer.Data.Entities;
 using Microsoft.EntityFrameworkCore;
 using share.Models.Order;
+using share.Models.Product;
 
 
 namespace ElinorStoreServer.Services
@@ -93,16 +94,31 @@ namespace ElinorStoreServer.Services
 
         public async Task<List<OrderSearchResponseDto>> SearchAsync(OrderSearchRequestDto model)
         {
-            var Orders = await _context.Orders
+            IQueryable<Order> Orders = _context.Orders
                                 .Where(a =>
                                 (model.Count == null || a.Count <= model.Count)
                                /* && (model.FromDate == null || a.CreatedAt >= model.FromDate)
                                 && (model.ToDate == null || a.CreatedAt <= model.ToDate)*/
                                && (model.UserName == null || a.User.Name.Contains(model.UserName))
                                && (model.ProductName == null || a.Product.Name.Contains(model.ProductName))
-                                )
-                                .Skip(model.PageNo * model.PageSize)
-                                .Take(model.PageSize)
+                                );
+                                 if (!string.IsNullOrEmpty(model.SortBy))
+                                {
+                                    switch (model.SortBy)
+                                    {
+                                        case "CountAsc":
+                                            Orders = Orders.OrderBy(a => a.Count);
+                                            break;
+                                        case "PriceDesc":
+                                            Orders = Orders.OrderByDescending(a => a.Count);
+                                            break;
+                                    }
+                                  }
+
+                                Orders = Orders.Skip(model.PageNo * model.PageSize).Take(model.PageSize);
+
+                                var searchResults = await Orders
+              
                                 .Select(a => new OrderSearchResponseDto
                                 {
                                     ProductId = a.Product.Id,
@@ -115,7 +131,7 @@ namespace ElinorStoreServer.Services
                                 }
                 )
                                 .ToListAsync();
-            return Orders;
+            return searchResults;
         }
 
     }

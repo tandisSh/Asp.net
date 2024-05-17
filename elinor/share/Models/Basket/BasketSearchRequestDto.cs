@@ -16,5 +16,6 @@ namespace share.Models.Basket
       /*  public string? CategoryName { get; set; }*/
         public string? ProductName { get; set; }
         public string? UserName { get; set; }
+        public string? SortBy { get; set; }
     }
 }

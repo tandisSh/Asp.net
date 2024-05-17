@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\elinor\\elinor\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|c:\\users\\user\\desktop\\elinor\\elinor\\elinorstoreserver\\services\\basketservicecs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|solutionrelative:elinorstoreserver\\services\\basketservicecs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|c:\\users\\user\\desktop\\elinor\\elinor\\elinorstoreserver\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|solutionrelative:elinorstoreserver\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|c:\\users\\user\\desktop\\elinor\\elinor\\elinorstoreserver\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|solutionrelative:elinorstoreserver\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FF843F7E-5638-4816-A940-3DBC3752D7EE}|share\\share.csproj|c:\\users\\user\\desktop\\elinor\\elinor\\share\\models\\product\\searchrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF843F7E-5638-4816-A940-3DBC3752D7EE}|share\\share.csproj|solutionrelative:share\\models\\product\\searchrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FF843F7E-5638-4816-A940-3DBC3752D7EE}|share\\share.csproj|c:\\users\\user\\desktop\\elinor\\elinor\\share\\models\\order\\ordersearchrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF843F7E-5638-4816-A940-3DBC3752D7EE}|share\\share.csproj|solutionrelative:share\\models\\order\\ordersearchrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,27 +31,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "BasketServicecs.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Services\\BasketServicecs.cs",
+              "RelativeDocumentMoniker": "ElinorStoreServer\\Services\\BasketServicecs.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Services\\BasketServicecs.cs",
+              "RelativeToolTip": "ElinorStoreServer\\Services\\BasketServicecs.cs",
+              "ViewState": "AQIAAE0AAAAAAAAAAAAUwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T17:08:10.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "ProductService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Services\\ProductService.cs",
               "RelativeDocumentMoniker": "ElinorStoreServer\\Services\\ProductService.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Services\\ProductService.cs",
               "RelativeToolTip": "ElinorStoreServer\\Services\\ProductService.cs",
-              "ViewState": "AQIAAEkAAAAAAAAAAAAwwFUAAABOAAAA",
+              "ViewState": "AQIAAGsAAAAAAAAAAAAUwG8AAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T15:45:11.869Z",
+              "WhenOpened": "2024-05-17T17:00:53.714Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "SearchRequestDto.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\elinor\\elinor\\share\\Models\\Product\\SearchRequestDto.cs",
-              "RelativeDocumentMoniker": "share\\Models\\Product\\SearchRequestDto.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\elinor\\elinor\\share\\Models\\Product\\SearchRequestDto.cs*",
-              "RelativeToolTip": "share\\Models\\Product\\SearchRequestDto.cs*",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABIAAAAcAAAA",
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Services\\OrderService.cs",
+              "RelativeDocumentMoniker": "ElinorStoreServer\\Services\\OrderService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Services\\OrderService.cs",
+              "RelativeToolTip": "ElinorStoreServer\\Services\\OrderService.cs",
+              "ViewState": "AQIAAF4AAAAAAAAAAAAkwGcAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T15:43:00.489Z",
+              "WhenOpened": "2024-05-17T17:00:37.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OrderSearchRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\elinor\\elinor\\share\\Models\\Order\\OrderSearchRequestDto.cs",
+              "RelativeDocumentMoniker": "share\\Models\\Order\\OrderSearchRequestDto.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\elinor\\elinor\\share\\Models\\Order\\OrderSearchRequestDto.cs",
+              "RelativeToolTip": "share\\Models\\Order\\OrderSearchRequestDto.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABIAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T17:00:01.336Z",
               "EditorCaption": ""
             }
           ]

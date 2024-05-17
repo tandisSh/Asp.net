@@ -81,16 +81,30 @@ namespace ElinorStoreServer.Services
 
        public async Task<List<BasketSearchResponseDto>> SearchAsync(BasketSearchRequestDto model)
         {
-            var Baskets = await _context.Baskets
+            IQueryable<Basket> baskets = _context.Baskets
                                 .Where(a =>
                                 (model.Count == null || a.Count <= model.Count)
-                              /* && (model.FromDate == null || a.CreatedAt >= model.FromDate)
-                               && (model.ToDate == null || a.CreatedAt <= model.ToDate)*/
+                               /* && (model.FromDate == null || a.CreatedAt >= model.FromDate)
+                                && (model.ToDate == null || a.CreatedAt <= model.ToDate)*/
                                && (model.UserName == null || a.User.Name.Contains(model.UserName))
                                && (model.ProductName == null || a.Product.Name.Contains(model.ProductName))
-                                )
-                                .Skip(model.PageNo * model.PageSize)
-                                .Take(model.PageSize)
+                                );
+            if (!string.IsNullOrEmpty(model.SortBy))
+            {
+                switch (model.SortBy)
+                {
+                    case "CountAsc":
+                        baskets = baskets.OrderBy(a => a.Count);
+                        break;
+                    case "CountDesc":
+                        baskets = baskets.OrderByDescending(a => a.Count);
+                        break;
+                }
+            }
+
+            baskets = baskets.Skip(model.PageNo * model.PageSize).Take(model.PageSize);
+
+            var searchResults = await baskets
                                 .Select(a => new BasketSearchResponseDto
                                 {
                                     ProductId = a.Product.Id,
@@ -103,7 +117,7 @@ namespace ElinorStoreServer.Services
                                 }
                 )
                                 .ToListAsync();
-            return Baskets;
+            return searchResults;
         }
 
     }

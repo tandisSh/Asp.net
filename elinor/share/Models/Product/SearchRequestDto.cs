@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace share.Models.Product
 {
-    public class OrderSearchRequestDto
+    public class SearchRequestDto
     {
         public int PageSize { get; set; }
         public int PageNo { get; set; }
@@ -17,5 +17,6 @@ namespace share.Models.Product
         public string? ProductName { get; set; }
         public int? MinPrice { get; set; }
         public int? Maxprice { get; set; }
+        public string? SortBy { get; set; }
     }
 }
