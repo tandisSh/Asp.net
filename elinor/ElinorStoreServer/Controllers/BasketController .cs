@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using share.Models.Basket;
 
+
 namespace ElinorStoreServer.Controllers
 
 {
@@ -22,6 +23,12 @@ namespace ElinorStoreServer.Controllers
         public async Task<IActionResult> Get(int id)
         {
             var result = await _BasketService.GetAsync(id);
+            return Ok(result);
+        }
+        [HttpGet("Search")]
+        public async Task<IActionResult> Search([FromQuery] BasketSearchRequestDto model)
+        {
+            var result = await _BasketService.SearchAsync(model);
             return Ok(result);
         }
         [HttpGet]

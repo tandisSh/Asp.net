@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace share.Models.Product
 {
-    public class SearchRequestDto
+    public class OrderSearchRequestDto
     {
         public int PageSize { get; set; }
         public int PageNo { get; set; }

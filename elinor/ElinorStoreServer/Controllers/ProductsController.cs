@@ -65,7 +65,7 @@ namespace IbulakStoreServer.Controllers
             return Ok(result);
         }
         [HttpGet("Search")]
-        public async Task<IActionResult> Search([FromQuery] SearchRequestDto model)
+        public async Task<IActionResult> Search([FromQuery] OrderSearchRequestDto model)
         {
             var result = await _productService.SearchAsync(model);
             return Ok(result);

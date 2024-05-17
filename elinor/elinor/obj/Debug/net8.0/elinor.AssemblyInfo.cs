@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("elinor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1cbcd7c22079644ea84766db21f506b6434d21e0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2b3f326f1d1ea3d351666ea9ddadaec704cf9b80")]
 [assembly: System.Reflection.AssemblyProductAttribute("elinor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("elinor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

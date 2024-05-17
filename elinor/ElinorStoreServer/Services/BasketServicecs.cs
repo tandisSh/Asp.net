@@ -2,6 +2,7 @@
 using ElinorStoreServer.Data.Entities;
 using Microsoft.EntityFrameworkCore;
 using share.Models.Basket;
+using share.Models.Product;
 
 namespace ElinorStoreServer.Services
 {
@@ -33,7 +34,7 @@ namespace ElinorStoreServer.Services
         }
         public async Task<List<Basket>> GetsByUserAsync(int userId)
         {
-            List<Basket> baskets = await _context.Baskets.Where(basket => basket.userId == userId).ToListAsync();
+            List<Basket> baskets = await _context.Baskets.Where(basket => basket.UserId == userId).ToListAsync();
             return basket;
         }
         public async Task AddAsync(BasketAddRequestDto model)
@@ -77,5 +78,33 @@ namespace ElinorStoreServer.Services
         {
             throw new NotImplementedException();
         }
+
+       public async Task<List<BasketSearchResponseDto>> SearchAsync(BasketSearchRequestDto model)
+        {
+            var Baskets = await _context.Baskets
+                                .Where(a =>
+                                (model.Count == null || a.Count <= model.Count)
+                              /* && (model.FromDate == null || a.CreatedAt >= model.FromDate)
+                               && (model.ToDate == null || a.CreatedAt <= model.ToDate)*/
+                               && (model.UserName == null || a.User.Name.Contains(model.UserName))
+                               && (model.ProductName == null || a.Product.Name.Contains(model.ProductName))
+                                )
+                                .Skip(model.PageNo * model.PageSize)
+                                .Take(model.PageSize)
+                                .Select(a => new BasketSearchResponseDto
+                                {
+                                    ProductId = a.Product.Id,
+                                    UserName = a.User.Name,
+                                    ProductName = a.Product.Name,
+                                    count = a.Count,
+                                    Price = a.Product.Price,
+                                  /*  CreatedAt = a.CreatedAt,*/
+                                    Description = a.Product.Description
+                                }
+                )
+                                .ToListAsync();
+            return Baskets;
+        }
+
     }
 }

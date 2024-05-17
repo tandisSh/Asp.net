@@ -3,6 +3,7 @@ using ElinorStoreServer.Data.Entities;
 using Microsoft.EntityFrameworkCore;
 using share.Models.Order;
 
+
 namespace ElinorStoreServer.Services
 {
     public class OrderService
@@ -89,5 +90,33 @@ namespace ElinorStoreServer.Services
             _context.Orders.Remove(order);
             await _context.SaveChangesAsync();
         }
+
+        public async Task<List<OrderSearchResponseDto>> SearchAsync(OrderSearchRequestDto model)
+        {
+            var Orders = await _context.Orders
+                                .Where(a =>
+                                (model.Count == null || a.Count <= model.Count)
+                               /* && (model.FromDate == null || a.CreatedAt >= model.FromDate)
+                                && (model.ToDate == null || a.CreatedAt <= model.ToDate)*/
+                               && (model.UserName == null || a.User.Name.Contains(model.UserName))
+                               && (model.ProductName == null || a.Product.Name.Contains(model.ProductName))
+                                )
+                                .Skip(model.PageNo * model.PageSize)
+                                .Take(model.PageSize)
+                                .Select(a => new OrderSearchResponseDto
+                                {
+                                    ProductId = a.Product.Id,
+                                    UserName = a.User.Name,
+                                    ProductName = a.Product.Name,
+                                    count = a.Count,
+                                    Price = a.Product.Price,
+                                    /*  CreatedAt = a.CreatedAt,*/
+                                    Description = a.Product.Description
+                                }
+                )
+                                .ToListAsync();
+            return Orders;
+        }
+
     }
 }

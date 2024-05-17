@@ -71,7 +71,7 @@ namespace ElinorStoreServer.Services
             await _context.SaveChangesAsync();
         }
 
-        public async Task<List<SearchResponseDto>> SearchAsync(SearchRequestDto model)
+        public async Task<List<OrderSearchResponseDto>> SearchAsync(OrderSearchRequestDto model)
         {
             var products = await _context.Products
                                 .Where(a =>
@@ -83,7 +83,7 @@ namespace ElinorStoreServer.Services
                                 )
                                 .Skip(model.PageNo * model.PageSize)
                                 .Take(model.PageSize)
-                                .Select(a => new SearchResponseDto
+                                .Select(a => new OrderSearchResponseDto
                                 {
                                     ProductId = a.Id,
                                     ProductName = a.Name,

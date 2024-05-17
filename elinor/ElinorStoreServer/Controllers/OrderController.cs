@@ -39,6 +39,12 @@ namespace ElinorStoreServer.Controllers
             var result = await _OrderService.GetsByProductAsync(productId);
             return Ok(result);
         }
+        [HttpGet("Search")]
+        public async Task<IActionResult> Search([FromQuery] OrderSearchRequestDto model)
+        {
+            var result = await _OrderService.SearchAsync(model);
+            return Ok(result);
+        }
         [HttpGet("GetsByUser")]
         public async Task<IActionResult> GetsByUser(int userId)
         {

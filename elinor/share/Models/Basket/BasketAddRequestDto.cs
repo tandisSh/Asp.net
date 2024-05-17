@@ -22,5 +22,6 @@ namespace share.Models.Basket
         /// شناسه محصول
         /// </summary>
         public int ProductId { get; set; }
+
     }
 }
