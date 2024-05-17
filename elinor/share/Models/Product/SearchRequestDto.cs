@@ -15,5 +15,7 @@ namespace share.Models.Product
         public DateTime? ToDate { get; set; }
         public string? CategoryName { get; set; }
         public string? ProductName { get; set; }
+        public int? MinPrice { get; set; }
+        public int? Maxprice { get; set; }
     }
 }
