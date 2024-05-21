@@ -2,7 +2,9 @@
 using ElinorStoreServer.Data.Entities;
 using Microsoft.EntityFrameworkCore;
 using share.Models.Basket;
+using share.Models.Order;
 using share.Models.Product;
+using share.Models.User;
 
 namespace ElinorStoreServer.Services
 {
@@ -120,5 +122,34 @@ namespace ElinorStoreServer.Services
             return searchResults;
         }
 
+
+   /*     public async Task<List<share.Models.Basket.BasketReportByProductResponseDto>> BaskerReportByUserIdAsync(BasketReportByProductRequestDto model)
+        {
+            var BasketsQuery = _context.Baskets.Where(a =>
+                                model.UserId == null || a.User.Id == model.UserId
+
+                                )
+                .GroupBy(a => a.UserId)
+                .Select(a => new
+                {
+                    UserId = a.Key,
+                    TotalSum = a.Count(s => s.ProductId)
+                });
+
+            var productsQuery = from product in _context.Products
+                                from Basket in BasketsQuery.Where(a => a.UserId == User.Id).DefaultIfEmpty()
+                                select new BasketReportByProductResponseDto
+                                {
+                                    ProductName = product.Name,
+                                    ProductCategoryName = product.Category.Name,
+                                    ProductId = product.Id,
+                                    TotalSum = (int?)order.TotalSum
+                                };
+
+            productsQuery = productsQuery.Skip(model.PageNo * model.PageSize)
+                                .Take(model.PageSize);
+            var result = await productsQuery.ToListAsync();
+            return result;
+        }*/
     }
 }

@@ -3,6 +3,7 @@ using ElinorStoreServer.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using share.Models.Basket;
+using share.Models.Order;
 
 
 namespace ElinorStoreServer.Controllers
@@ -67,5 +68,11 @@ namespace ElinorStoreServer.Controllers
             await _BasketService.DeleteAsync(id);
             return Ok();
         }
+       /* [HttpGet("BaskerReportByUserIdAsync")]
+        public async Task<IActionResult> OrdersReportByProduct([FromQuery] OrderReportByProductRequestDto model)
+        {
+            var result = await _BasketService.BasketsReportByProductAsync(model);
+            return Ok(result);
+        }*/
     }
 }

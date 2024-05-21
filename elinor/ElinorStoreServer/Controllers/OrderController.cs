@@ -93,15 +93,6 @@ namespace ElinorStoreServer.Controllers
             await _context.SaveChangesAsync();
             return Ok("مبارکه!");
         }
-
-
-
-
-
-
-
-
-
         [HttpPut]
 
         public async Task<IActionResult> Edit([FromBody] Order order)
@@ -115,5 +106,13 @@ namespace ElinorStoreServer.Controllers
             await _OrderService.DeleteAsync(id);
             return Ok("محصول و از دست دادی!");
         }
+
+        [HttpGet("OrdersReportByProduct")]
+        public async Task<IActionResult>OrdersReportByProduct([FromQuery]OrderReportByProductRequestDto model)
+        {
+          var resualt=  await _OrderService.OrdersReportByProductAsync(model);
+            return Ok(resualt);
+        }
     }
+
 }

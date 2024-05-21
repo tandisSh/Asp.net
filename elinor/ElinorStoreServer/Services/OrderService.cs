@@ -61,10 +61,6 @@ namespace ElinorStoreServer.Services
             await _context.SaveChangesAsync();
         }
 
-
-
-
-
         public async Task EditAsync(Order order)
         {
             Order? oldOrder = await _context.Orders.FindAsync(order.Id);
@@ -134,5 +130,35 @@ namespace ElinorStoreServer.Services
             return searchResults;
         }
 
+
+        public async Task<List<BasketReportByProductResponseDto>> OrdersReportByProductAsync(OrderReportByProductRequestDto model)
+        {
+            var ordersQuery = _context.Orders.Where(a =>
+                                (model.FromDate == null || a.CreatedAt >= model.FromDate)
+                               && (model.ToDate == null || a.CreatedAt <= model.ToDate)
+                                )
+                .GroupBy(a => a.ProductId)
+                .Select(a => new
+                {
+                    ProductId = a.Key,
+                    TotalSum = a.Sum(s => s.Price)
+                });
+
+            var productsQuery = from product in _context.Products
+                                from order in ordersQuery.Where(a => a.ProductId == product.Id).DefaultIfEmpty()
+                                select new BasketReportByProductResponseDto
+                                {
+                                    ProductName = product.Name,
+                                    ProductCategoryName = product.Category.Name,
+                                    ProductId = product.Id,
+                                    TotalSum = (int?)order.TotalSum
+                                };
+
+            productsQuery = productsQuery.Skip(model.PageNo * model.PageSize)
+                                .Take(model.PageSize);
+            var result = await productsQuery.ToListAsync();
+            return result;
+        }
     }
+
 }
