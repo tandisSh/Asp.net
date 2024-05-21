@@ -17,7 +17,7 @@ namespace ElinorStoreServer.Controllers
 
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get(int id)
+        public async Task<IActionResult> Get(string id)
         {
             var result = await _userService.GetAsync(id);
             if (result == null)
@@ -40,13 +40,13 @@ namespace ElinorStoreServer.Controllers
             return Ok("سلاممم");
         }
         [HttpPut]
-        public async Task<IActionResult> Edit([FromBody] User user)
+        public async Task<IActionResult> Edit([FromBody] AppUser user)
         {
             await _userService.EditAsync(user);
             return Ok();
         }
         [HttpDelete]
-        public async Task<IActionResult> Delete(int id)
+        public async Task<IActionResult> Delete(string id)
         {
             await _userService.DeleteAsync(id);
             return Ok("خداحافظ...");

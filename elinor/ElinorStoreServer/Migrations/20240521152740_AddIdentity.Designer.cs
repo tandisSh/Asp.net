@@ -3,6 +3,7 @@ using System;
 using ElinorStoreServer.Data.Domain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ElinorStoreServer.Migrations
 {
     [DbContext(typeof(StoreDbContext))]
-    partial class StoreDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240521152740_AddIdentity")]
+    partial class AddIdentity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.4");
@@ -36,18 +39,10 @@ namespace ElinorStoreServer.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTimeOffset?>("LockoutEnd")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("NormalizedEmail")
@@ -87,26 +82,6 @@ namespace ElinorStoreServer.Migrations
                         .HasDatabaseName("UserNameIndex");
 
                     b.ToTable("AspNetUsers", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = "2426167f-842e-4933-ae72-d8dfe34abf78",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "fd08b0e4-c509-4643-9c08-c970a9b3f9ab",
-                            Email = "tandis00shojaee@gmail.com",
-                            EmailConfirmed = true,
-                            LastName = "شجاعی پور",
-                            LockoutEnabled = false,
-                            Name = "تندیس ",
-                            NormalizedEmail = "tandis00shojaee@gmail.com",
-                            NormalizedUserName = "09336540361",
-                            PasswordHash = "AQAAAAIAAYagAAAAEEoX9UpeFx7+wxUOk47TXsVHnaFlJwsNDi5Pd/E4CUNpo5eDU4/8qiXG+TBhbPHIIw==",
-                            PhoneNumberConfirmed = true,
-                            SecurityStamp = "",
-                            TwoFactorEnabled = false,
-                            UserName = "09336540361"
-                        });
                 });
 
             modelBuilder.Entity("ElinorStoreServer.Data.Entities.Basket", b =>
@@ -121,9 +96,8 @@ namespace ElinorStoreServer.Migrations
                     b.Property<int>("ProductId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+                    b.Property<int>("UserId")
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
 
@@ -171,9 +145,8 @@ namespace ElinorStoreServer.Migrations
                     b.Property<int>("ProductId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+                    b.Property<int>("UserId")
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
 
@@ -221,6 +194,25 @@ namespace ElinorStoreServer.Migrations
                     b.ToTable("Products");
                 });
 
+            modelBuilder.Entity("ElinorStoreServer.Data.Entities.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
@@ -245,20 +237,6 @@ namespace ElinorStoreServer.Migrations
                         .HasDatabaseName("RoleNameIndex");
 
                     b.ToTable("AspNetRoles", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = "a2a2df88-2952-408d-9c34-eca9177d92ac",
-                            Name = "Admin",
-                            NormalizedName = "ADMIN"
-                        },
-                        new
-                        {
-                            Id = "3d8a6345-4e13-4005-8996-1f19a7c9d887",
-                            Name = "User",
-                            NormalizedName = "USER"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -342,13 +320,6 @@ namespace ElinorStoreServer.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetUserRoles", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            UserId = "2426167f-842e-4933-ae72-d8dfe34abf78",
-                            RoleId = "a2a2df88-2952-408d-9c34-eca9177d92ac"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
@@ -378,8 +349,8 @@ namespace ElinorStoreServer.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("ElinorStoreServer.Data.Entities.AppUser", "User")
-                        .WithMany()
+                    b.HasOne("ElinorStoreServer.Data.Entities.User", "User")
+                        .WithMany("Baskets")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -397,8 +368,8 @@ namespace ElinorStoreServer.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("ElinorStoreServer.Data.Entities.AppUser", "User")
-                        .WithMany()
+                    b.HasOne("ElinorStoreServer.Data.Entities.User", "User")
+                        .WithMany("Orders")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -473,6 +444,13 @@ namespace ElinorStoreServer.Migrations
             modelBuilder.Entity("ElinorStoreServer.Data.Entities.Category", b =>
                 {
                     b.Navigation("Products");
+                });
+
+            modelBuilder.Entity("ElinorStoreServer.Data.Entities.User", b =>
+                {
+                    b.Navigation("Baskets");
+
+                    b.Navigation("Orders");
                 });
 #pragma warning restore 612, 618
         }

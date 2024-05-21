@@ -45,7 +45,7 @@ namespace ElinorStoreServer.Controllers
             return Ok(result);
         }
         [HttpGet("GetsByUser")]
-        public async Task<IActionResult> GetsByUser(int userId)
+        public async Task<IActionResult> GetsByUser(string userId)
         {
             var result = await _BasketService.GetsByUserAsync(userId);
             return Ok(result);

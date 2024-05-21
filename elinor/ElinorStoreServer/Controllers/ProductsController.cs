@@ -2,6 +2,7 @@
 using ElinorStoreServer.Data.Domain;
 using ElinorStoreServer.Data.Entities;
 using ElinorStoreServer.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using share.Models.Product;
@@ -20,13 +21,14 @@ namespace IbulakStoreServer.Controllers
             _productService = productService;
         }
 
-
+        [Authorize(Roles="User")]
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
             var result = await _productService.GetAsync(id);
             return Ok(result);
         }
+        [Authorize]
         [HttpGet]
         public async Task<IActionResult> Gets()
         {
@@ -55,6 +57,7 @@ namespace IbulakStoreServer.Controllers
             var result = await _productService.SearchAsync(model);
             return Ok(result);
         }
+        [Authorize(Roles = "Admin")]
 
         [HttpPost]
         public async Task<IActionResult> Add(ProductAddRequestDto product)
