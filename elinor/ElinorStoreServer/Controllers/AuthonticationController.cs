@@ -1,9 +1,12 @@
 ﻿using ElinorStoreServer.Data.Domain;
 using ElinorStoreServer.Data.Entities;
+using Microsoft.AspNetCore.Authentication.BearerToken;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using share.Models.Authentication;
+using Shared.Models.Authentication;
 
 namespace IbulakStoreServer.Controllers
 {
@@ -43,6 +46,25 @@ namespace IbulakStoreServer.Controllers
             var result = await _userManager.CreateAsync(user, model.Password);
             await _userManager.AddToRoleAsync(user, "User");
             return Ok();
+        }
+        [HttpPost("Login")]
+        public async Task<Results<Ok<AccessTokenResponse>, EmptyHttpResult, ProblemHttpResult>> Login([FromBody] LoginRequestDto login, [FromQuery] bool? useCookies, [FromQuery] bool? useSessionCookies, [FromServices] IServiceProvider sp)
+        {
+            var useCookieScheme = (useCookies == true) || (useSessionCookies == true);
+            var isPersistent = (useCookies == true) && (useSessionCookies != true);
+            _signInManager.AuthenticationScheme = useCookieScheme ? IdentityConstants.ApplicationScheme : IdentityConstants.BearerScheme;
+            var user = await _userManager.FindByNameAsync(login.Mobile);
+            if (user == null)
+            {
+                return TypedResults.Problem("نام کاربری یا رمز عبور اشتباه است", statusCode: StatusCodes.Status401Unauthorized);
+            }
+            var result = await _signInManager.PasswordSignInAsync(user, login.Password, isPersistent, lockoutOnFailure: true);
+            if (!result.Succeeded)
+            {
+                return TypedResults.Problem("نام کاربری یا رمز عبور اشتباه است", statusCode: StatusCodes.Status401Unauthorized);
+            }
+            // The signInManager already produced the needed response in the form of a cookie or bearer token.
+            return TypedResults.Empty;
         }
 
     }
