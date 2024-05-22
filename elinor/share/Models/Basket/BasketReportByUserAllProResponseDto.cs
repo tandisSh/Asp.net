@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace share.Models.Basket
 {
-    public class BasketReportByUserResponseDto
+    public class BasketReportByUserAllProResponseDto
     {
-        
-        public string ProductName { get; set; }
-        public int ProductId { get; set; }
-      /*  public int? TotalSum { get; set; }*/
+       
         public string UserId { get; set; }
         public int Count { get; set; }
     }

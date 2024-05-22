@@ -85,6 +85,32 @@
   },
   {
     "ContainingType": "ElinorStoreServer.Controllers.BasketController",
+    "Method": "BasketReportByUserAllProAsync",
+    "RelativePath": "Basket/BasketReportByUserIdAllProAsync",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageNo",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ElinorStoreServer.Controllers.BasketController",
     "Method": "BasketReportByUserIdAsync",
     "RelativePath": "Basket/BasketReportByUserIdAsync",
     "HttpMethod": "GET",

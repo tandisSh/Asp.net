@@ -14,7 +14,6 @@ namespace ElinorStoreServer.Data.Entities
         public int Count { get; set; }
         [ForeignKey("Product")]
         public int ProductId { get; set; }
-        public string ProductName { get; set; }
         public virtual AppUser User { get; set; } = default!;
         public virtual Product Product { get; set; } = default!;
 

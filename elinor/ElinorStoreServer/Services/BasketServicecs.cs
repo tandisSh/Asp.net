@@ -125,7 +125,7 @@ namespace ElinorStoreServer.Services
 
         public async Task<List<share.Models.Basket.BasketReportByUserResponseDto>> BasketReportByUserIdAsync(BasketReportByUserRequestDto model)
         {
-            /*   تعداد کالاهایی که هر کاربر ثبت کرده   */
+            /*   تعداد یک کالای مشخص که یک کاربر مشخص ثبت کرده   */
             var BasketsQuery =await  _context.Baskets.Where(a => a.User.Id == model.UserId
                                    )
                 .GroupBy(a => a.ProductId ) // Group by both UserId and ProductId
@@ -143,6 +143,33 @@ namespace ElinorStoreServer.Services
                 ProductName = b.Product.Name,
                 UserId = model.UserId,
                 Count = b.Count
+            }).ToList();
+
+            return result;
+
+        }
+        public async Task<List<share.Models.Basket.BasketReportByUserAllProResponseDto>> BasketReportByUserIdAllProAsync(BasketReportByUserRequestDto model)
+        {
+            /*   تعداد کل کالاهایی که هر کاربر ثبت کرده   */
+            var BasketsQuery = await _context.Baskets.Where(a => a.User.Id == model.UserId
+                                   )
+                .GroupBy(a => a.UserId) // Group by both UserId and ProductId
+                .Select(g => new
+                {
+                    UserId = g.Key,
+               
+
+                    TotalSum = g.Sum(s => s.Count)
+
+               
+
+                })
+            .ToListAsync();
+            var result = BasketsQuery.Select(b => new BasketReportByUserAllProResponseDto
+            {
+                
+                UserId = model.UserId,
+                Count = b.TotalSum
             }).ToList();
 
             return result;

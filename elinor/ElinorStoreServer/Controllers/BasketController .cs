@@ -72,8 +72,24 @@ namespace ElinorStoreServer.Controllers
         public async Task<IActionResult> BasketReportByUserIdAsync([FromQuery] BasketReportByUserRequestDto model)
         {
             var result = await _BasketService.BasketReportByUserIdAsync(model);
+            if (!result.Any())
+            {
+                return NotFound(" داده ای پیدا نکردیم!");
+            }
             return Ok(result);
-            
+
+        }
+        [HttpGet("BasketReportByUserIdAllProAsync")]
+        public async Task<IActionResult> BasketReportByUserAllProAsync([FromQuery] BasketReportByUserRequestDto model)
+        {
+            var result = await _BasketService.BasketReportByUserIdAllProAsync(model);
+          
+
+            if (!result.Any())
+            {
+                return NotFound(" داده ای پیدا نکردیم!");
+            }
+            return Ok(result);
         }
     }
 }
