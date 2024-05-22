@@ -123,33 +123,30 @@ namespace ElinorStoreServer.Services
         }
 
 
-   /*     public async Task<List<share.Models.Basket.BasketReportByProductResponseDto>> BaskerReportByUserIdAsync(BasketReportByProductRequestDto model)
+        public async Task<List<share.Models.Basket.BasketReportByUserResponseDto>> BasketReportByUserIdAsync(BasketReportByUserRequestDto model)
         {
-            var BasketsQuery = _context.Baskets.Where(a =>
-                                model.UserId == null || a.User.Id == model.UserId
-
-                                )
-                .GroupBy(a => a.UserId)
-                .Select(a => new
+            /*   تعداد کالاهایی که هر کاربر ثبت کرده   */
+            var BasketsQuery =await  _context.Baskets.Where(a => a.User.Id == model.UserId
+                                   )
+                .GroupBy(a => a.ProductId ) // Group by both UserId and ProductId
+                .Select(g => new
                 {
-                    UserId = a.Key,
-                    TotalSum = a.Count(s => s.ProductId)
-                });
+                    UserId = g.Key,
+                    Count = g.Count(),
+                    Product =g.First().Product,
+                    
+                })
+            .ToListAsync();
+            var result =  BasketsQuery.Select(b => new BasketReportByUserResponseDto
+            {
+                ProductId = b.Product.Id,
+                ProductName = b.Product.Name,
+                UserId = model.UserId,
+                Count = b.Count
+            }).ToList();
 
-            var productsQuery = from product in _context.Products
-                                from Basket in BasketsQuery.Where(a => a.UserId == User.Id).DefaultIfEmpty()
-                                select new BasketReportByProductResponseDto
-                                {
-                                    ProductName = product.Name,
-                                    ProductCategoryName = product.Category.Name,
-                                    ProductId = product.Id,
-                                    TotalSum = (int?)order.TotalSum
-                                };
-
-            productsQuery = productsQuery.Skip(model.PageNo * model.PageSize)
-                                .Take(model.PageSize);
-            var result = await productsQuery.ToListAsync();
             return result;
-        }*/
+
+        }
     }
 }

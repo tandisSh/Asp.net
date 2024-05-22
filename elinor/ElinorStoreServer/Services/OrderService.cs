@@ -1,6 +1,7 @@
 ﻿using ElinorStoreServer.Data.Domain;
 using ElinorStoreServer.Data.Entities;
 using Microsoft.EntityFrameworkCore;
+using share.Models.Basket;
 using share.Models.Order;
 using share.Models.Product;
 
@@ -131,7 +132,7 @@ namespace ElinorStoreServer.Services
         }
 
 
-        public async Task<List<BasketReportByProductResponseDto>> OrdersReportByProductAsync(OrderReportByProductRequestDto model)
+        public async Task<List<share.Models.Order.OrderReportByProductResponseDto>> OrdersReportByProductAsync(OrderReportByProductRequestDto model)
         {
             var ordersQuery = _context.Orders.Where(a =>
                                 (model.FromDate == null || a.CreatedAt >= model.FromDate)
@@ -146,7 +147,7 @@ namespace ElinorStoreServer.Services
 
             var productsQuery = from product in _context.Products
                                 from order in ordersQuery.Where(a => a.ProductId == product.Id).DefaultIfEmpty()
-                                select new BasketReportByProductResponseDto
+                                select new share.Models.Order.OrderReportByProductResponseDto
                                 {
                                     ProductName = product.Name,
                                     ProductCategoryName = product.Category.Name,
@@ -158,6 +159,27 @@ namespace ElinorStoreServer.Services
                                 .Take(model.PageSize);
             var result = await productsQuery.ToListAsync();
             return result;
+        }
+        public async Task<List<share.Models.Order.OrderReportByProductResponseDto>> OrderCountReportByProductAsync(OrderReportByProductRequestDto model)
+        {
+            var OrdersQuery = _context.Orders.Where(a =>
+                                model.ProductId == null || a.Product.Id == model.ProductId
+
+                                )
+                .GroupBy(a => a.ProductId)
+                .Select(a => new
+                {
+                    ProductId = a.Key,
+                    Count = a.Count()
+                });
+            var result = await OrdersQuery.Select(b => new share.Models.Order.OrderReportByProductResponseDto
+            {
+                ProductId = b.ProductId,
+                Count = b.Count
+            }).ToListAsync();
+
+            return result;
+
         }
     }
 

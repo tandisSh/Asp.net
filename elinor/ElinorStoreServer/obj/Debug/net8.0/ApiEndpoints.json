@@ -69,54 +69,6 @@
   },
   {
     "ContainingType": "ElinorStoreServer.Controllers.BasketController",
-    "Method": "Add",
-    "RelativePath": "Basket",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "basket",
-        "Type": "share.Models.Basket.BasketAddRequestDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ElinorStoreServer.Controllers.BasketController",
-    "Method": "Edit",
-    "RelativePath": "Basket",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "basket",
-        "Type": "ElinorStoreServer.Data.Entities.Basket",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ElinorStoreServer.Controllers.BasketController",
-    "Method": "Delete",
-    "RelativePath": "Basket",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ElinorStoreServer.Controllers.BasketController",
     "Method": "Get",
     "RelativePath": "Basket/{id}",
     "HttpMethod": "GET",
@@ -133,30 +85,24 @@
   },
   {
     "ContainingType": "ElinorStoreServer.Controllers.BasketController",
-    "Method": "GetsByProduct",
-    "RelativePath": "Basket/GetsByProduct",
+    "Method": "BasketReportByUserIdAsync",
+    "RelativePath": "Basket/BasketReportByUserIdAsync",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "productId",
+        "Name": "PageSize",
         "Type": "System.Int32",
         "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ElinorStoreServer.Controllers.BasketController",
-    "Method": "GetsByUser",
-    "RelativePath": "Basket/GetsByUser",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
+      },
       {
-        "Name": "userId",
+        "Name": "PageNo",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserId",
         "Type": "System.String",
         "IsRequired": false
       }
@@ -165,8 +111,40 @@
   },
   {
     "ContainingType": "ElinorStoreServer.Controllers.BasketController",
+    "Method": "Add",
+    "RelativePath": "Basket/\u0627\u0641\u0632\u0648\u062F\u0646 \u0633\u0628\u062F\u062E\u0631\u06CC\u062F",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "basket",
+        "Type": "share.Models.Basket.BasketAddRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ElinorStoreServer.Controllers.BasketController",
+    "Method": "Edit",
+    "RelativePath": "Basket/\u062A\u063A\u06CC\u06CC\u0631 \u0633\u0628\u062F\u062E\u0631\u06CC\u062F",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "basket",
+        "Type": "ElinorStoreServer.Data.Entities.Basket",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ElinorStoreServer.Controllers.BasketController",
     "Method": "Search",
-    "RelativePath": "Basket/Search",
+    "RelativePath": "Basket/\u062C\u0633\u062A \u0648 \u062C\u0648",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -209,6 +187,54 @@
       {
         "Name": "SortBy",
         "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ElinorStoreServer.Controllers.BasketController",
+    "Method": "Delete",
+    "RelativePath": "Basket/\u062D\u0630\u0641 \u0633\u0628\u062F\u062E\u0631\u06CC\u062F",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ElinorStoreServer.Controllers.BasketController",
+    "Method": "GetsByUser",
+    "RelativePath": "Basket/\u062F\u0631\u06CC\u0627\u0641\u062A \u0628\u0631 \u0627\u0633\u0627\u0633 \u06A9\u0627\u0631\u0628\u0631",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ElinorStoreServer.Controllers.BasketController",
+    "Method": "GetsByProduct",
+    "RelativePath": "Basket/\u062F\u0631\u06CC\u0627\u0641\u062A \u0628\u0631 \u0627\u0633\u0627\u0633 \u0645\u062D\u0635\u0648\u0644",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
         "IsRequired": false
       }
     ],
@@ -396,6 +422,42 @@
   },
   {
     "ContainingType": "ElinorStoreServer.Controllers.OrderController",
+    "Method": "OrderCountReportByProductAsync",
+    "RelativePath": "Order/OrderCountReportByProductAsync",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageNo",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "FromDate",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ToDate",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProductId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ElinorStoreServer.Controllers.OrderController",
     "Method": "OrdersReportByProduct",
     "RelativePath": "Order/OrdersReportByProduct",
     "HttpMethod": "GET",
@@ -420,6 +482,11 @@
       {
         "Name": "ToDate",
         "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProductId",
+        "Type": "System.Int32",
         "IsRequired": false
       }
     ],

@@ -3,12 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\elinor\\elinor\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|c:\\users\\user\\desktop\\elinor\\elinor\\elinorstoreserver\\controllers\\authonticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|solutionrelative:elinorstoreserver\\controllers\\authonticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FF843F7E-5638-4816-A940-3DBC3752D7EE}|share\\share.csproj|c:\\users\\user\\desktop\\elinor\\elinor\\share\\models\\basket\\basketreportbyuserresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF843F7E-5638-4816-A940-3DBC3752D7EE}|share\\share.csproj|solutionrelative:share\\models\\basket\\basketreportbyuserresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FF843F7E-5638-4816-A940-3DBC3752D7EE}|share\\share.csproj|c:\\users\\user\\desktop\\elinor\\elinor\\share\\models\\authentication\\loginrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF843F7E-5638-4816-A940-3DBC3752D7EE}|share\\share.csproj|solutionrelative:share\\models\\authentication\\loginrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|c:\\users\\user\\desktop\\elinor\\elinor\\elinorstoreserver\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|solutionrelative:elinorstoreserver\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|c:\\users\\user\\desktop\\elinor\\elinor\\elinorstoreserver\\data\\entities\\basket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|solutionrelative:elinorstoreserver\\data\\entities\\basket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|c:\\users\\user\\desktop\\elinor\\elinor\\elinorstoreserver\\data\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|solutionrelative:elinorstoreserver\\data\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF843F7E-5638-4816-A940-3DBC3752D7EE}|share\\share.csproj|c:\\users\\user\\desktop\\elinor\\elinor\\share\\models\\product\\productaddrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF843F7E-5638-4816-A940-3DBC3752D7EE}|share\\share.csproj|solutionrelative:share\\models\\product\\productaddrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|c:\\users\\user\\desktop\\elinor\\elinor\\elinorstoreserver\\services\\basketservicecs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|solutionrelative:elinorstoreserver\\services\\basketservicecs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|c:\\users\\user\\desktop\\elinor\\elinor\\elinorstoreserver\\controllers\\basketcontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD066588-A2D9-47FE-AAA3-B3EB2364CCE3}|ElinorStoreServer\\ElinorStoreServer.csproj|solutionrelative:elinorstoreserver\\controllers\\basketcontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +38,97 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AuthonticationController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Controllers\\AuthonticationController.cs",
-              "RelativeDocumentMoniker": "ElinorStoreServer\\Controllers\\AuthonticationController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Controllers\\AuthonticationController.cs",
-              "RelativeToolTip": "ElinorStoreServer\\Controllers\\AuthonticationController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEMAAAAJAAAA",
+              "DocumentIndex": 4,
+              "Title": "ProductAddRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\elinor\\elinor\\share\\Models\\Product\\ProductAddRequestDto.cs",
+              "RelativeDocumentMoniker": "share\\Models\\Product\\ProductAddRequestDto.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\elinor\\elinor\\share\\Models\\Product\\ProductAddRequestDto.cs",
+              "RelativeToolTip": "share\\Models\\Product\\ProductAddRequestDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T18:21:24.856Z",
+              "WhenOpened": "2024-05-22T17:05:45.866Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Data\\Entities\\Product.cs",
+              "RelativeDocumentMoniker": "ElinorStoreServer\\Data\\Entities\\Product.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Data\\Entities\\Product.cs",
+              "RelativeToolTip": "ElinorStoreServer\\Data\\Entities\\Product.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T17:05:25.919Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Basket.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Data\\Entities\\Basket.cs",
+              "RelativeDocumentMoniker": "ElinorStoreServer\\Data\\Entities\\Basket.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Data\\Entities\\Basket.cs",
+              "RelativeToolTip": "ElinorStoreServer\\Data\\Entities\\Basket.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T17:02:49.2Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BasketReportByUserResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\elinor\\elinor\\share\\Models\\Basket\\BasketReportByUserResponseDto.cs",
+              "RelativeDocumentMoniker": "share\\Models\\Basket\\BasketReportByUserResponseDto.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\elinor\\elinor\\share\\Models\\Basket\\BasketReportByUserResponseDto.cs",
+              "RelativeToolTip": "share\\Models\\Basket\\BasketReportByUserResponseDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T16:58:36.967Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "LoginRequestDto.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\elinor\\elinor\\share\\Models\\Authentication\\LoginRequestDto.cs",
-              "RelativeDocumentMoniker": "share\\Models\\Authentication\\LoginRequestDto.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\elinor\\elinor\\share\\Models\\Authentication\\LoginRequestDto.cs",
-              "RelativeToolTip": "share\\Models\\Authentication\\LoginRequestDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAABAAAA",
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "ElinorStoreServer\\Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "ElinorStoreServer\\Controllers\\OrderController.cs",
+              "ViewState": "AQIAAGkAAAAAAAAAAAAIwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T18:20:06.94Z",
+              "WhenOpened": "2024-05-22T16:53:41.925Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BasketServicecs.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Services\\BasketServicecs.cs",
+              "RelativeDocumentMoniker": "ElinorStoreServer\\Services\\BasketServicecs.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Services\\BasketServicecs.cs",
+              "RelativeToolTip": "ElinorStoreServer\\Services\\BasketServicecs.cs",
+              "ViewState": "AQIAAFIAAAAAAAAAAAAowIYAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T15:41:42.788Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BasketController .cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Controllers\\BasketController .cs",
+              "RelativeDocumentMoniker": "ElinorStoreServer\\Controllers\\BasketController .cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\elinor\\elinor\\ElinorStoreServer\\Controllers\\BasketController .cs",
+              "RelativeToolTip": "ElinorStoreServer\\Controllers\\BasketController .cs",
+              "ViewState": "AQIAADYAAAAAAAAAAAAmwEcAAABrAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T15:25:52.673Z",
               "EditorCaption": ""
             }
           ]

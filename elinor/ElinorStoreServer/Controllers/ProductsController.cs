@@ -25,6 +25,16 @@ namespace IbulakStoreServer.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
+           /* try
+            {
+                var result = await _productService.GetAsync(id);
+                return Ok(result);
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                throw new UnauthorizedAccessException("You must be logged in to access this resource.", ex);
+            }*/
+
             var result = await _productService.GetAsync(id);
             return Ok(result);
         }
@@ -52,9 +62,15 @@ namespace IbulakStoreServer.Controllers
         }
 
         [HttpGet("Search")]
+        /*search in products*/
         public async Task<IActionResult> Search([FromQuery] SearchRequestDto model)
         {
             var result = await _productService.SearchAsync(model);
+            if (!result.Any())
+            {
+                return NotFound(" داده ای پیدا نکردیم!");
+            }
+
             return Ok(result);
         }
         [Authorize(Roles = "Admin")]
@@ -63,19 +79,20 @@ namespace IbulakStoreServer.Controllers
         public async Task<IActionResult> Add(ProductAddRequestDto product)
         {
             await _productService.AddAsync(product);
-            return Ok();
+            return Ok("محصول شما اضافه شد.");
+
         }
         [HttpPut]
         public async Task<IActionResult> Edit([FromBody] Product product)
         {
             await _productService.EditAsync(product);
-            return Ok();
+            return Ok("تغییرات اعمال شد.");
         }
         [HttpDelete]
         public async Task<IActionResult> Delete(int id)
         {
             await _productService.DeleteAsync(id);
-            return Ok();
+            return Ok("شما حذف محصول انجام دادید.");
         }
     }
 }

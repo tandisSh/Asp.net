@@ -14,9 +14,7 @@ namespace share.Models.Product
         public int count { get; set; }
         public int Price { get; set; }
         public DateTime CreatedAt { get; set; }
-        public string ProductImageFileName { get; set; }
         public int CategoryId { get; set; }
         public string CategoryName { get; set; }
-        public string CategoryImageFileName { get; set; }
     }
 }

@@ -26,7 +26,7 @@ namespace ElinorStoreServer.Controllers
             var result = await _BasketService.GetAsync(id);
             return Ok(result);
         }
-        [HttpGet("Search")]
+        [HttpGet("جست و جو")]
         public async Task<IActionResult> Search([FromQuery] BasketSearchRequestDto model)
         {
             var result = await _BasketService.SearchAsync(model);
@@ -38,41 +38,42 @@ namespace ElinorStoreServer.Controllers
             var result = await _BasketService.GetsAsync();
             return Ok(result);
         }
-        [HttpGet("GetsByProduct")]
+        [HttpGet("دریافت بر اساس محصول")]
         public async Task<IActionResult> GetsByProduct(int productId)
         {
             var result = await _BasketService.GetsByProductAsync(productId);
             return Ok(result);
         }
-        [HttpGet("GetsByUser")]
+        [HttpGet("دریافت بر اساس کاربر")]
         public async Task<IActionResult> GetsByUser(string userId)
         {
             var result = await _BasketService.GetsByUserAsync(userId);
             return Ok(result);
         }
-        [HttpPost]
+        [HttpPost("افزودن سبدخرید")]
         public async Task<IActionResult> Add(BasketAddRequestDto basket)
         {
             await _BasketService.AddAsync(basket);
-            return Ok();
+            return Ok("اضافه شد!");
         }
-        [HttpPut]
+        [HttpPut("تغییر سبدخرید")]
         public async Task<IActionResult> Edit([FromBody] Basket basket)
         {
             await _BasketService.EditAsync(basket);
-            return Ok();
+            return Ok("تغییرات انجام شد.");
         }
-        [HttpDelete]
+        [HttpDelete("حذف سبدخرید")]
         public async Task<IActionResult> Delete(int id)
         {
             await _BasketService.DeleteAsync(id);
-            return Ok();
+            return Ok("پاک شد.");
         }
-       /* [HttpGet("BaskerReportByUserIdAsync")]
-        public async Task<IActionResult> OrdersReportByProduct([FromQuery] OrderReportByProductRequestDto model)
+        [HttpGet("BasketReportByUserIdAsync")]
+        public async Task<IActionResult> BasketReportByUserIdAsync([FromQuery] BasketReportByUserRequestDto model)
         {
-            var result = await _BasketService.BasketsReportByProductAsync(model);
+            var result = await _BasketService.BasketReportByUserIdAsync(model);
             return Ok(result);
-        }*/
+            
+        }
     }
 }

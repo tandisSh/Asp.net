@@ -96,9 +96,10 @@ namespace ElinorStoreServer.Services
             _context.Products.Remove(product);
             await _context.SaveChangesAsync();
         }
-        /*search*/
+       
         public async Task<List<SearchResponseDto>> SearchAsync(SearchRequestDto model)
         {
+            /*search in products*/
             IQueryable<Product> products = _context.Products
                .Where(a =>
                     (model.count == null || a.count <= model.count)
@@ -135,8 +136,7 @@ namespace ElinorStoreServer.Services
                    CreatedAt = a.CreatedAt,
                    Description = a.Description,
                    CategoryName = a.Category.Name,
-                   CategoryImageFileName = a.Category.ImageFileName,
-                   ProductImageFileName = a.ImageFileName
+               
                })
                .ToListAsync();
 

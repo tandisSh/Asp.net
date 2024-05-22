@@ -113,6 +113,12 @@ namespace ElinorStoreServer.Controllers
           var resualt=  await _OrderService.OrdersReportByProductAsync(model);
             return Ok(resualt);
         }
+        [HttpGet("OrderCountReportByProductAsync")]
+        public async Task<IActionResult> OrderCountReportByProductAsync([FromQuery] OrderReportByProductRequestDto model)
+        {
+            var resualt = await _OrderService.OrderCountReportByProductAsync(model);
+            return Ok(resualt);
+        }
     }
 
 }

@@ -93,7 +93,7 @@ namespace ElinorStoreServer.Migrations
                         {
                             Id = "2426167f-842e-4933-ae72-d8dfe34abf78",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "fd08b0e4-c509-4643-9c08-c970a9b3f9ab",
+                            ConcurrencyStamp = "d5aba49f-0799-4ec5-976d-8eceea8543cd",
                             Email = "tandis00shojaee@gmail.com",
                             EmailConfirmed = true,
                             LastName = "شجاعی پور",
@@ -101,7 +101,7 @@ namespace ElinorStoreServer.Migrations
                             Name = "تندیس ",
                             NormalizedEmail = "tandis00shojaee@gmail.com",
                             NormalizedUserName = "09336540361",
-                            PasswordHash = "AQAAAAIAAYagAAAAEEoX9UpeFx7+wxUOk47TXsVHnaFlJwsNDi5Pd/E4CUNpo5eDU4/8qiXG+TBhbPHIIw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEFz72uuLDtGNqOLw+LOUWs7X6pEQIraYJ8i3MgvKSfcNOPBiZ+N0iYlV8aeIC1qsfQ==",
                             PhoneNumberConfirmed = true,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
@@ -115,11 +115,19 @@ namespace ElinorStoreServer.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("Category")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<int>("Count")
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("ProductId")
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("ProductName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("UserId")
                         .IsRequired()
@@ -255,7 +263,7 @@ namespace ElinorStoreServer.Migrations
                         },
                         new
                         {
-                            Id = "3d8a6345-4e13-4005-8996-1f19a7c9d887",
+                            Id = "8d3a80db-65f6-4c17-b594-a2e3a46f8054",
                             Name = "User",
                             NormalizedName = "USER"
                         });
