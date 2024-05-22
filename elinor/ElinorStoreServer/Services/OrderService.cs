@@ -132,8 +132,10 @@ namespace ElinorStoreServer.Services
         }
 
 
-        public async Task<List<share.Models.Order.OrderReportByProductResponseDto>> OrdersReportByProductAsync(OrderReportByProductRequestDto model)
+        public async Task<List<share.Models.Order.OrderReportByProductResponseDto>> OrdersReportByDateAsync(OrderReportByProductRequestDto model)
         {
+            //مجموع تعداد و قیمت هر کالای سفارش داده شده بر اساس تاریخ
+
             var ordersQuery = _context.Orders.Where(a =>
                                 (model.FromDate == null || a.CreatedAt >= model.FromDate)
                                && (model.ToDate == null || a.CreatedAt <= model.ToDate)
@@ -142,7 +144,9 @@ namespace ElinorStoreServer.Services
                 .Select(a => new
                 {
                     ProductId = a.Key,
-                    TotalSum = a.Sum(s => s.Price)
+                    TotalSum = a.Sum(s => s.Price),
+                    TotalCount = a.Sum(s => s.Count)
+
                 });
 
             var productsQuery = from product in _context.Products
@@ -152,7 +156,8 @@ namespace ElinorStoreServer.Services
                                     ProductName = product.Name,
                                     ProductCategoryName = product.Category.Name,
                                     ProductId = product.Id,
-                                    TotalSum = (int?)order.TotalSum
+                                    TotalSum = (int?)order.TotalSum,
+                                    TotalCount = (int?)order.TotalCount
                                 };
 
             productsQuery = productsQuery.Skip(model.PageNo * model.PageSize)
@@ -160,7 +165,7 @@ namespace ElinorStoreServer.Services
             var result = await productsQuery.ToListAsync();
             return result;
         }
-        public async Task<List<share.Models.Order.OrderReportByProductResponseDto>> OrderCountReportByProductAsync(OrderReportByProductRequestDto model)
+  /*      public async Task<List<share.Models.Order.OrderReportByProductResponseDto>> OrderCountReportByProductAsync(OrderReportByProductRequestDto model)
         {
             var OrdersQuery = _context.Orders.Where(a =>
                                 model.ProductId == null || a.Product.Id == model.ProductId
@@ -180,7 +185,7 @@ namespace ElinorStoreServer.Services
 
             return result;
 
-        }
+        }*/
     }
 
 }

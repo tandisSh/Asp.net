@@ -107,18 +107,18 @@ namespace ElinorStoreServer.Controllers
             return Ok("محصول و از دست دادی!");
         }
 
-        [HttpGet("OrdersReportByProduct")]
-        public async Task<IActionResult>OrdersReportByProduct([FromQuery]OrderReportByProductRequestDto model)
+        [HttpGet("OrdersReportByDate")]
+        public async Task<IActionResult> OrdersReportByDate([FromQuery]OrderReportByProductRequestDto model)
         {
-          var resualt=  await _OrderService.OrdersReportByProductAsync(model);
+          var resualt=  await _OrderService.OrdersReportByDateAsync(model);
             return Ok(resualt);
         }
-        [HttpGet("OrderCountReportByProductAsync")]
+      /*  [HttpGet("OrderCountReportByProductAsync")]
         public async Task<IActionResult> OrderCountReportByProductAsync([FromQuery] OrderReportByProductRequestDto model)
         {
             var resualt = await _OrderService.OrderCountReportByProductAsync(model);
             return Ok(resualt);
-        }
+        }*/
     }
 
 }

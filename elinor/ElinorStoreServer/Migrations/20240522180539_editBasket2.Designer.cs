@@ -3,6 +3,7 @@ using System;
 using ElinorStoreServer.Data.Domain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ElinorStoreServer.Migrations
 {
     [DbContext(typeof(StoreDbContext))]
-    partial class StoreDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240522180539_editBasket2")]
+    partial class editBasket2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.4");

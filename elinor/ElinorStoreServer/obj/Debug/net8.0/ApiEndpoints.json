@@ -448,8 +448,8 @@
   },
   {
     "ContainingType": "ElinorStoreServer.Controllers.OrderController",
-    "Method": "OrderCountReportByProductAsync",
-    "RelativePath": "Order/OrderCountReportByProductAsync",
+    "Method": "OrdersReportByDate",
+    "RelativePath": "Order/OrdersReportByDate",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -472,47 +472,6 @@
       {
         "Name": "ToDate",
         "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      },
-      {
-        "Name": "ProductId",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ElinorStoreServer.Controllers.OrderController",
-    "Method": "OrdersReportByProduct",
-    "RelativePath": "Order/OrdersReportByProduct",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "PageSize",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "PageNo",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "FromDate",
-        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      },
-      {
-        "Name": "ToDate",
-        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      },
-      {
-        "Name": "ProductId",
-        "Type": "System.Int32",
         "IsRequired": false
       }
     ],
