@@ -448,6 +448,32 @@
   },
   {
     "ContainingType": "ElinorStoreServer.Controllers.OrderController",
+    "Method": "OrderCountReportByProductAsync",
+    "RelativePath": "Order/OrderCountReportByProductAsync",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageNo",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProductId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ElinorStoreServer.Controllers.OrderController",
     "Method": "OrdersReportByDate",
     "RelativePath": "Order/OrdersReportByDate",
     "HttpMethod": "GET",

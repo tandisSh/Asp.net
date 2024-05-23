@@ -132,7 +132,7 @@ namespace ElinorStoreServer.Services
         }
 
 
-        public async Task<List<share.Models.Order.OrderReportByProductResponseDto>> OrdersReportByDateAsync(OrderReportByProductRequestDto model)
+        public async Task<List<share.Models.Order.OrderReportByDateResponseDto>> OrdersReportByDateAsync(OrderReportByDateRequestDto model)
         {
             //مجموع تعداد و قیمت هر کالای سفارش داده شده بر اساس تاریخ
 
@@ -151,7 +151,7 @@ namespace ElinorStoreServer.Services
 
             var productsQuery = from product in _context.Products
                                 from order in ordersQuery.Where(a => a.ProductId == product.Id).DefaultIfEmpty()
-                                select new share.Models.Order.OrderReportByProductResponseDto
+                                select new share.Models.Order.OrderReportByDateResponseDto
                                 {
                                     ProductName = product.Name,
                                     ProductCategoryName = product.Category.Name,
@@ -165,9 +165,10 @@ namespace ElinorStoreServer.Services
             var result = await productsQuery.ToListAsync();
             return result;
         }
-  /*      public async Task<List<share.Models.Order.OrderReportByProductResponseDto>> OrderCountReportByProductAsync(OrderReportByProductRequestDto model)
+        public async Task<List<share.Models.Order.OrderReportByProductResponseDtocs>> OrderCountReportByProduct(OrderReportByProductRequestDto model)
         {
-            var OrdersQuery = _context.Orders.Where(a =>
+            //جمع سفارشات برای هر کالا
+            var OrdersQuery =await _context.Orders.Where(a =>
                                 model.ProductId == null || a.Product.Id == model.ProductId
 
                                 )
@@ -175,17 +176,24 @@ namespace ElinorStoreServer.Services
                 .Select(a => new
                 {
                     ProductId = a.Key,
-                    Count = a.Count()
-                });
-            var result = await OrdersQuery.Select(b => new share.Models.Order.OrderReportByProductResponseDto
+                    TotalSum = a.Sum(s => s.Count),
+                    Product = a.First().Product,
+                }).ToListAsync();
+            var result = OrdersQuery.Select(b => new OrderReportByProductResponseDtocs      
             {
-                ProductId = b.ProductId,
-                Count = b.Count
-            }).ToListAsync();
+                ProductName = b.Product?.Name ?? string.Empty, // Use null-coalescing operator to avoid NullReferenceException
+                ProductCategoryName = b.Product?.Category?.Name ?? string.Empty, // Add another null check here
+                ProductId = model.ProductId,
+                TotalSum = (int?)b.TotalSum
 
+            })
+
+            .ToList();
             return result;
 
-        }*/
+      
+        }
+
     }
 
 }

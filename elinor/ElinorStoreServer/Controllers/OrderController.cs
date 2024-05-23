@@ -2,6 +2,7 @@
 using ElinorStoreServer.Data.Entities;
 using ElinorStoreServer.Services;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using share.Models.Order;
@@ -108,17 +109,22 @@ namespace ElinorStoreServer.Controllers
         }
 
         [HttpGet("OrdersReportByDate")]
-        public async Task<IActionResult> OrdersReportByDate([FromQuery]OrderReportByProductRequestDto model)
+        public async Task<IActionResult> OrdersReportByDate([FromQuery] OrderReportByDateRequestDto model)
         {
           var resualt=  await _OrderService.OrdersReportByDateAsync(model);
             return Ok(resualt);
         }
-      /*  [HttpGet("OrderCountReportByProductAsync")]
-        public async Task<IActionResult> OrderCountReportByProductAsync([FromQuery] OrderReportByProductRequestDto model)
+        [HttpGet("OrderCountReportByProductAsync")]
+        public async Task<IActionResult> OrderCountReportByProduct([FromQuery] OrderReportByProductRequestDto model)
         {
-            var resualt = await _OrderService.OrderCountReportByProductAsync(model);
-            return Ok(resualt);
-        }*/
+            var result = await _OrderService.OrderCountReportByProduct(model);
+            if (!result.Any())
+            {
+                return NotFound(" داده ای پیدا نکردیم!");
+            }
+        
+            return Ok(result);
+        }
     }
 
 }
