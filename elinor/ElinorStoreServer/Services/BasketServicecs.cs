@@ -175,5 +175,27 @@ namespace ElinorStoreServer.Services
             return result;
 
         }
+        public async Task<List<BasketAllProductCountResponseDto>> BasketAllProductAsync(BasketAllProductCountRequestDto model)
+        {
+            //تعداد کل کالاهای توی بسکت
+            var TotalCount = await _context.Baskets
+             .Select(o => o.Count)
+             .SumAsync();
+        
+            var result = new List<BasketAllProductCountResponseDto>
+            {
+                new BasketAllProductCountResponseDto
+                {
+                    
+                    TotalCount = TotalCount
+                }
+            };
+            /*            result = result.Skip((model.PageNo) * model.PageSize).Take(model.PageSize).ToList();
+            */
+            return result;
+        }
+
+
+
     }
 }

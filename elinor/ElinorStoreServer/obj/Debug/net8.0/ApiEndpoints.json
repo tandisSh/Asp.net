@@ -85,6 +85,22 @@
   },
   {
     "ContainingType": "ElinorStoreServer.Controllers.BasketController",
+    "Method": "BasketAllProductAsync",
+    "RelativePath": "Basket/BasketAllProductAsync",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "share.Models.Basket.BasketAllProductCountRequestDto",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ElinorStoreServer.Controllers.BasketController",
     "Method": "BasketReportByUserAllProAsync",
     "RelativePath": "Basket/BasketReportByUserIdAllProAsync",
     "HttpMethod": "GET",

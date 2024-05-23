@@ -91,5 +91,17 @@ namespace ElinorStoreServer.Controllers
             }
             return Ok(result);
         }
+        [HttpGet("BasketAllProductAsync")]
+        public async Task<IActionResult> BasketAllProductAsync([FromQuery] BasketAllProductCountRequestDto model)
+        {
+            var result = await _BasketService.BasketAllProductAsync(model);
+
+
+            if (!result.Any())
+            {
+                return NotFound(" داده ای پیدا نکردیم!");
+            }
+            return Ok(result);
+        }
     }
 }
