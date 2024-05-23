@@ -1,6 +1,7 @@
 ﻿using ElinorStoreServer.Data.Domain;
 using ElinorStoreServer.Data.Entities;
 using Microsoft.EntityFrameworkCore;
+using share.Models.Order;
 using share.Models.Product;
 using System.Linq;
 
@@ -142,6 +143,14 @@ namespace ElinorStoreServer.Services
 
             return searchResults;
         }
+
+        public async Task<List<Product>> GetsUnAvailableProductsAsync()
+        {
+            // کالاهای ناموجود
+            List<Product> productsWithZeroCount = await _context.Products.Where(p => p.count <= 0).ToListAsync();
+            return productsWithZeroCount;
+        }
+
 
     }
 }

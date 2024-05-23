@@ -190,9 +190,8 @@ namespace ElinorStoreServer.Services
 
             .ToList();
             return result;
-
-      
         }
+
 
     }
 

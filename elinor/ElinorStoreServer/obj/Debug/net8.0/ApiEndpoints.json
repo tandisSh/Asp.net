@@ -448,7 +448,7 @@
   },
   {
     "ContainingType": "ElinorStoreServer.Controllers.OrderController",
-    "Method": "OrderCountReportByProductAsync",
+    "Method": "OrderCountReportByProduct",
     "RelativePath": "Order/OrderCountReportByProductAsync",
     "HttpMethod": "GET",
     "IsController": true,
@@ -637,6 +637,16 @@
     "ContainingType": "IbulakStoreServer.Controllers.ProductsController",
     "Method": "DesSort",
     "RelativePath": "Products/DesSort",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IbulakStoreServer.Controllers.ProductsController",
+    "Method": "GetsUnAvailableProducts",
+    "RelativePath": "Products/GetsUnAvailableProductsAsync",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

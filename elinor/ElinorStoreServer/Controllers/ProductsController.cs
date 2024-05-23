@@ -94,5 +94,15 @@ namespace IbulakStoreServer.Controllers
             await _productService.DeleteAsync(id);
             return Ok("شما حذف محصول انجام دادید.");
         }
+        [HttpGet("GetsUnAvailableProducts")]
+        public async Task<IActionResult> GetsUnAvailableProductsAsync()
+        {
+            var result = await _productService.GetsUnAvailableProductsAsync();
+            if (!result.Any())
+            {
+                return NotFound(" داده ای پیدا نکردیم!");
+            }
+            return Ok(result);
+        }
     }
 }
