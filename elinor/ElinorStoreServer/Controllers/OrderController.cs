@@ -125,7 +125,18 @@ namespace ElinorStoreServer.Controllers
         
             return Ok(result);
         }
-      
+        [HttpGet("OrderTotalAsync")]
+        public async Task<IActionResult> OrderTotalAsync([FromQuery] orderTotalRequestDto model)
+        {
+            var result = await _OrderService.OrderTotalAsync(model);
+            if (!result.Any())
+            {
+                return NotFound(" داده ای پیدا نکردیم!");
+            }
+
+            return Ok(result);
+        }
+
     }
 
 }

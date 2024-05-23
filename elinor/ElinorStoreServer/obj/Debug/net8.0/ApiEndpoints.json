@@ -505,6 +505,22 @@
   },
   {
     "ContainingType": "ElinorStoreServer.Controllers.OrderController",
+    "Method": "OrderTotalAsync",
+    "RelativePath": "Order/OrderTotalAsync",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "share.Models.Order.orderTotalRequestDto",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ElinorStoreServer.Controllers.OrderController",
     "Method": "Search",
     "RelativePath": "Order/Search",
     "HttpMethod": "GET",
@@ -645,8 +661,8 @@
   },
   {
     "ContainingType": "IbulakStoreServer.Controllers.ProductsController",
-    "Method": "GetsUnAvailableProducts",
-    "RelativePath": "Products/GetsUnAvailableProductsAsync",
+    "Method": "GetsUnAvailableProductsAsync",
+    "RelativePath": "Products/GetsUnAvailableProducts",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

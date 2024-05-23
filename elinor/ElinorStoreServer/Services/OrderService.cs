@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using share.Models.Basket;
 using share.Models.Order;
 using share.Models.Product;
+using System.Collections.Generic;
 
 
 namespace ElinorStoreServer.Services
@@ -43,7 +44,7 @@ namespace ElinorStoreServer.Services
         {
             _context.Orders.Add(order);
             await _context.SaveChangesAsync();
-         
+
         }
 
         public async Task AddRangeAsync(List<OrderAddRequestDto> orders)
@@ -55,7 +56,7 @@ namespace ElinorStoreServer.Services
                 Price = orderDto.Price,
                 ProductId = orderDto.ProductId,
                 UserId = orderDto.UserId,
-            
+
             }).ToList();
 
             _context.Orders.AddRange(order);
@@ -70,7 +71,7 @@ namespace ElinorStoreServer.Services
                 throw new Exception("سفارشی  با این شناسه پیدا نشد.");
             }
             oldOrder.Count = order.Count;
-            oldOrder.Price = order.Price; 
+            oldOrder.Price = order.Price;
             oldOrder.ProductId = order.ProductId;
             oldOrder.UserId = order.UserId;
 
@@ -99,35 +100,35 @@ namespace ElinorStoreServer.Services
                                && (model.UserName == null || a.User.Name.Contains(model.UserName))
                                && (model.ProductName == null || a.Product.Name.Contains(model.ProductName))
                                 );
-                                 if (!string.IsNullOrEmpty(model.SortBy))
-                                {
-                                    switch (model.SortBy)
-                                    {
-                                        case "CountAsc":
-                                            Orders = Orders.OrderBy(a => a.Count);
-                                            break;
-                                        case "PriceDesc":
-                                            Orders = Orders.OrderByDescending(a => a.Count);
-                                            break;
-                                    }
-                                  }
+            if (!string.IsNullOrEmpty(model.SortBy))
+            {
+                switch (model.SortBy)
+                {
+                    case "CountAsc":
+                        Orders = Orders.OrderBy(a => a.Count);
+                        break;
+                    case "PriceDesc":
+                        Orders = Orders.OrderByDescending(a => a.Count);
+                        break;
+                }
+            }
 
-                                Orders = Orders.Skip(model.PageNo * model.PageSize).Take(model.PageSize);
+            Orders = Orders.Skip(model.PageNo * model.PageSize).Take(model.PageSize);
 
-                                var searchResults = await Orders
-              
-                                .Select(a => new OrderSearchResponseDto
-                                {
-                                    ProductId = a.Product.Id,
-                                    UserName = a.User.Name,
-                                    ProductName = a.Product.Name,
-                                    count = a.Count,
-                                    Price = a.Product.Price,
-                                    /*  CreatedAt = a.CreatedAt,*/
-                                    Description = a.Product.Description
-                                }
-                )
-                                .ToListAsync();
+            var searchResults = await Orders
+
+            .Select(a => new OrderSearchResponseDto
+            {
+                ProductId = a.Product.Id,
+                UserName = a.User.Name,
+                ProductName = a.Product.Name,
+                count = a.Count,
+                Price = a.Product.Price,
+                /*  CreatedAt = a.CreatedAt,*/
+                Description = a.Product.Description
+            }
+)
+            .ToListAsync();
             return searchResults;
         }
 
@@ -145,7 +146,7 @@ namespace ElinorStoreServer.Services
                 {
                     ProductId = a.Key,
                     TotalSum = a.Sum(s => s.Price),
-                    TotalCount = a.Sum(s => s.Count)
+                    Count = a.Sum(s => s.Count)
 
                 });
 
@@ -157,7 +158,7 @@ namespace ElinorStoreServer.Services
                                     ProductCategoryName = product.Category.Name,
                                     ProductId = product.Id,
                                     TotalSum = (int?)order.TotalSum,
-                                    TotalCount = (int?)order.TotalCount
+                                    TotalCount = (int?)order.Count
                                 };
 
             productsQuery = productsQuery.Skip(model.PageNo * model.PageSize)
@@ -168,7 +169,7 @@ namespace ElinorStoreServer.Services
         public async Task<List<share.Models.Order.OrderReportByProductResponseDtocs>> OrderCountReportByProduct(OrderReportByProductRequestDto model)
         {
             //جمع سفارشات برای هر کالا
-            var OrdersQuery =await _context.Orders.Where(a =>
+            var OrdersQuery = await _context.Orders.Where(a =>
                                 model.ProductId == null || a.Product.Id == model.ProductId
 
                                 )
@@ -179,7 +180,7 @@ namespace ElinorStoreServer.Services
                     TotalSum = a.Sum(s => s.Count),
                     Product = a.First().Product,
                 }).ToListAsync();
-            var result = OrdersQuery.Select(b => new OrderReportByProductResponseDtocs      
+            var result = OrdersQuery.Select(b => new OrderReportByProductResponseDtocs
             {
                 ProductName = b.Product?.Name ?? string.Empty, // Use null-coalescing operator to avoid NullReferenceException
                 ProductCategoryName = b.Product?.Category?.Name ?? string.Empty, // Add another null check here
@@ -192,7 +193,25 @@ namespace ElinorStoreServer.Services
             return result;
         }
 
-
+        public async Task<List<OrderTotalResponseDto>> OrderTotalAsync(orderTotalRequestDto model)
+        {
+            //فروش کلی
+            var totalSum = await _context.Orders
+            .Select(o => o.Price * o.Count)
+            .SumAsync();
+            var TotalCount = await _context.Orders.CountAsync();
+            var result = new List<OrderTotalResponseDto>
+            {
+                new OrderTotalResponseDto
+                {
+                    TotalSum = totalSum,
+                    TotalCount = TotalCount
+                }
+            };
+/*            result = result.Skip((model.PageNo) * model.PageSize).Take(model.PageSize).ToList();
+*/            return result;
+        }
     }
-
 }
+
+
