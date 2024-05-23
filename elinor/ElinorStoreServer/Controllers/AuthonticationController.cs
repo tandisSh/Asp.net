@@ -45,7 +45,7 @@ namespace IbulakStoreServer.Controllers
 
             var result = await _userManager.CreateAsync(user, model.Password);
             await _userManager.AddToRoleAsync(user, "User");
-            return Ok();
+            return Ok("خوش آمدید.");
         }
         [HttpPost("Login")]
         public async Task<Results<Ok<AccessTokenResponse>, EmptyHttpResult, ProblemHttpResult>> Login([FromBody] LoginRequestDto login, [FromQuery] bool? useCookies, [FromQuery] bool? useSessionCookies, [FromServices] IServiceProvider sp)

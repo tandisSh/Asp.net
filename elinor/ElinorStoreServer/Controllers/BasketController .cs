@@ -24,6 +24,12 @@ namespace ElinorStoreServer.Controllers
         public async Task<IActionResult> Get(int id)
         {
             var result = await _BasketService.GetAsync(id);
+
+            if (result == null)
+            {
+                return NotFound("کاربر پیدا نشد!");
+            }
+      
             return Ok(result);
         }
         [HttpGet("جست و جو")]
@@ -31,6 +37,8 @@ namespace ElinorStoreServer.Controllers
         {
             var result = await _BasketService.SearchAsync(model);
             return Ok(result);
+
+
         }
         [HttpGet]
         public async Task<IActionResult> Gets()

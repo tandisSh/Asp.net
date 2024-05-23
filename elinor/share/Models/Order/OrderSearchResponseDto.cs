@@ -16,7 +16,6 @@ namespace share.Models.Order
         public DateTime CreatedAt { get; set; }
         public string ProductImageFileName { get; set; }
         public int CategoryId { get; set; }
-        public string CategoryName { get; set; }
         public string CategoryImageFileName { get; set; }
         public string UserName { get; set; }
     }

@@ -22,6 +22,7 @@ namespace ElinorStoreServer.Services
         public async Task<Basket?> GetAsync(int id)
         {
             Basket? basket = await _context.Baskets.FindAsync(id);
+
             return basket;
         }
         public async Task<List<Basket>> GetsAsync()
@@ -83,12 +84,10 @@ namespace ElinorStoreServer.Services
 
        public async Task<List<BasketSearchResponseDto>> SearchAsync(BasketSearchRequestDto model)
         {
+            //جستوجو بر اساس فیلدهای مختلف
             IQueryable<Basket> baskets = _context.Baskets
                                 .Where(a =>
-                                (model.Count == null || a.Count <= model.Count)
-                               /* && (model.FromDate == null || a.CreatedAt >= model.FromDate)
-                                && (model.ToDate == null || a.CreatedAt <= model.ToDate)*/
-                               && (model.UserName == null || a.User.Name.Contains(model.UserName))
+                                (model.UserName == null || a.User.Name.Contains(model.UserName))
                                && (model.ProductName == null || a.Product.Name.Contains(model.ProductName))
                                 );
             if (!string.IsNullOrEmpty(model.SortBy))
@@ -114,7 +113,8 @@ namespace ElinorStoreServer.Services
                                     ProductName = a.Product.Name,
                                     count = a.Count,
                                     Price = a.Product.Price,
-                                  /*  CreatedAt = a.CreatedAt,*/
+                                    UserId = a.User.Id, 
+                                    ProductImageFileName = a.Product.ImageFileName,
                                     Description = a.Product.Description
                                 }
                 )
@@ -125,14 +125,14 @@ namespace ElinorStoreServer.Services
 
         public async Task<List<share.Models.Basket.BasketReportByUserResponseDto>> BasketReportByUserIdAsync(BasketReportByUserRequestDto model)
         {
-            /*   تعداد یک کالای مشخص که یک کاربر مشخص ثبت کرده   */
+            /*   تعداد دفعاتی که یک کالای مشخص توسط یک کاربر مشخص ثبت شده   */
             var BasketsQuery =await  _context.Baskets.Where(a => a.User.Id == model.UserId
                                    )
                 .GroupBy(a => a.ProductId ) // Group by both UserId and ProductId
                 .Select(g => new
                 {
                     UserId = g.Key,
-                    Count = g.Count(),
+                    number = g.Count(),
                     Product =g.First().Product,
                     
                 })
@@ -142,7 +142,7 @@ namespace ElinorStoreServer.Services
                 ProductId = b.Product.Id,
                 ProductName = b.Product.Name,
                 UserId = model.UserId,
-                Count = b.Count
+                number = b.number
             }).ToList();
 
             return result;
