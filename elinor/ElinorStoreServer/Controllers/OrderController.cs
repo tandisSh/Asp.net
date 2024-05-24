@@ -1,6 +1,7 @@
 ﻿using ElinorStoreServer.Data.Domain;
 using ElinorStoreServer.Data.Entities;
 using ElinorStoreServer.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
@@ -22,30 +23,44 @@ namespace ElinorStoreServer.Controllers
             _context = context;
         }
 
+
+        [Authorize(Roles = "Admin")]
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
             var result = await _OrderService.GetAsync(id);
             return Ok(result);
         }
+
+
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<IActionResult> Gets()
         {
             var result = await _OrderService.GetsAsync();
             return Ok(result);
         }
+
+        [Authorize(Roles = "Admin")]
+
         [HttpGet("GetsByProduct")]
         public async Task<IActionResult> GetsByProduct(int productId)
         {
             var result = await _OrderService.GetsByProductAsync(productId);
             return Ok(result);
         }
+
+        [Authorize(Roles = "Admin")]
+
         [HttpGet("Search")]
         public async Task<IActionResult> Search([FromQuery] OrderSearchRequestDto model)
         {
             var result = await _OrderService.SearchAsync(model);
             return Ok(result);
         }
+
+        [Authorize(Roles = "Admin")]
+
         [HttpGet("GetsByUser")]
         public async Task<IActionResult> GetsByUser(string userId)
         {
@@ -58,6 +73,8 @@ namespace ElinorStoreServer.Controllers
                  await _OrderService.AddAsync(order);
                  return Ok();
              }*/
+
+        [Authorize(Roles = "Admin")]
 
         [HttpPost("AddRange")]
         public async Task<IActionResult> AddRange(List<OrderAddRequestDto> orders)
@@ -94,6 +111,9 @@ namespace ElinorStoreServer.Controllers
             await _context.SaveChangesAsync();
             return Ok("مبارکه!");
         }
+
+        [Authorize(Roles = "Admin")]
+
         [HttpPut]
 
         public async Task<IActionResult> Edit([FromBody] Order order)
@@ -101,6 +121,9 @@ namespace ElinorStoreServer.Controllers
             await _OrderService.EditAsync(order);
             return Ok("تغییرت انجام شد عزیزم.");
         }
+
+        [Authorize(Roles = "Admin")]
+
         [HttpDelete]
         public async Task<IActionResult> Delete(int id)
         {
@@ -108,12 +131,17 @@ namespace ElinorStoreServer.Controllers
             return Ok("محصول و از دست دادی!");
         }
 
+        [Authorize(Roles = "Admin")]
+
         [HttpGet("OrdersReportByDate")]
         public async Task<IActionResult> OrdersReportByDate([FromQuery] OrderReportByDateRequestDto model)
         {
           var resualt=  await _OrderService.OrdersReportByDateAsync(model);
             return Ok(resualt);
         }
+
+        [Authorize(Roles = "Admin")]
+
         [HttpGet("OrderCountReportByProductAsync")]
         public async Task<IActionResult> OrderCountReportByProduct([FromQuery] OrderReportByProductRequestDto model)
         {
@@ -125,6 +153,9 @@ namespace ElinorStoreServer.Controllers
         
             return Ok(result);
         }
+
+        [Authorize(Roles = "Admin")]
+
         [HttpGet("OrderTotalAsync")]
         public async Task<IActionResult> OrderTotalAsync([FromQuery] orderTotalRequestDto model)
         {

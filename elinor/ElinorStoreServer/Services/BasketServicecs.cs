@@ -30,15 +30,15 @@ namespace ElinorStoreServer.Services
             List<Basket> baskets = await _context.Baskets.ToListAsync();
             return baskets;
         }
-        public async Task<List<Basket>> GetsByProductAsync(int productId)
+        public async Task<List<Basket>> GetsByProductAsync(int ProductId)
         {
             List<Basket> baskets = await _context.Baskets.Where(basket => basket.ProductId == ProductId).ToListAsync();
-            return basket;
+            return baskets;
         }
         public async Task<List<Basket>> GetsByUserAsync(string userId)
         {
             List<Basket> baskets = await _context.Baskets.Where(basket => basket.UserId == userId).ToListAsync();
-            return basket;
+            return baskets;
         }
         public async Task AddAsync(BasketAddRequestDto model)
         {

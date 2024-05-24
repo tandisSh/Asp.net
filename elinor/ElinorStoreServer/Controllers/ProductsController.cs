@@ -21,7 +21,7 @@ namespace IbulakStoreServer.Controllers
             _productService = productService;
         }
 
-        [Authorize(Roles="User")]
+        [Authorize()]
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
@@ -38,7 +38,8 @@ namespace IbulakStoreServer.Controllers
             var result = await _productService.GetAsync(id);
             return Ok(result);
         }
-        [Authorize]
+        [Authorize()]
+
         [HttpGet]
         public async Task<IActionResult> Gets()
         {
@@ -46,6 +47,8 @@ namespace IbulakStoreServer.Controllers
             return Ok(result);
         }
         /*sort*/
+
+        [Authorize()]
         [HttpGet("sort")]
         public async Task<IActionResult> Sort()
         {
@@ -54,6 +57,8 @@ namespace IbulakStoreServer.Controllers
         }
 
         /*DesSort*/
+
+        [Authorize()]
         [HttpGet("DesSort")]
         public async Task<IActionResult> DesSort()
         {
@@ -61,6 +66,7 @@ namespace IbulakStoreServer.Controllers
             return Ok(result);
         }
 
+        [Authorize()]
         [HttpGet("Search")]
         /*search in products*/
         public async Task<IActionResult> Search([FromQuery] SearchRequestDto model)
@@ -82,18 +88,27 @@ namespace IbulakStoreServer.Controllers
             return Ok("محصول شما اضافه شد.");
 
         }
+
+        [Authorize(Roles = "Admin")]
+
         [HttpPut]
         public async Task<IActionResult> Edit([FromBody] Product product)
         {
             await _productService.EditAsync(product);
             return Ok("تغییرات اعمال شد.");
         }
+
+        [Authorize(Roles = "Admin")]
+
         [HttpDelete]
         public async Task<IActionResult> Delete(int id)
         {
             await _productService.DeleteAsync(id);
             return Ok("شما حذف محصول انجام دادید.");
         }
+
+        [Authorize(Roles = "Admin")]
+
         [HttpGet("GetsUnAvailableProducts")]
         public async Task<IActionResult> GetsUnAvailableProductsAsync()
         {

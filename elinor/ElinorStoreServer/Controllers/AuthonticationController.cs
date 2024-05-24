@@ -45,7 +45,10 @@ namespace IbulakStoreServer.Controllers
 
             var result = await _userManager.CreateAsync(user, model.Password);
             await _userManager.AddToRoleAsync(user, "User");
-            return Ok("خوش آمدید.");
+            string username = user.Name;
+
+            return Ok($" عزیز خوش آمدی{username} ");
+
         }
         [HttpPost("Login")]
         public async Task<Results<Ok<AccessTokenResponse>, EmptyHttpResult, ProblemHttpResult>> Login([FromBody] LoginRequestDto login, [FromQuery] bool? useCookies, [FromQuery] bool? useSessionCookies, [FromServices] IServiceProvider sp)
@@ -64,6 +67,7 @@ namespace IbulakStoreServer.Controllers
                 return TypedResults.Problem("نام کاربری یا رمز عبور اشتباه است", statusCode: StatusCodes.Status401Unauthorized);
             }
             // The signInManager already produced the needed response in the form of a cookie or bearer token.
+
             return TypedResults.Empty;
         }
 

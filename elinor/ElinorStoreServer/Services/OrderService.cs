@@ -33,12 +33,12 @@ namespace ElinorStoreServer.Services
         public async Task<List<Order>> GetsByProductAsync(int productId)
         {
             List<Order> orders = await _context.Orders.Where(order => order.ProductId == productId).ToListAsync();
-            return order;
+            return orders;
         }
         public async Task<List<Order>> GetsByUserAsync(string userId)
         {
             List<Order> orders = await _context.Orders.Where(order => order.UserId == userId).ToListAsync();
-            return order;
+            return orders;
         }
         public async Task AddAsync(Order order)
         {

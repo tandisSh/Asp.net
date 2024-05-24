@@ -1,5 +1,6 @@
 ﻿using ElinorStoreServer.Data.Entities;
 using ElinorStoreServer.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using share.Models.User;
 
@@ -15,7 +16,7 @@ namespace ElinorStoreServer.Controllers
             _userService = userService;
         }
 
-
+        [Authorize()]
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(string id)
         {
@@ -26,6 +27,8 @@ namespace ElinorStoreServer.Controllers
             }
             return Ok(result);
         }
+
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<IActionResult> Gets()
         {
@@ -33,22 +36,37 @@ namespace ElinorStoreServer.Controllers
             return Ok(result);
         }
 
+
+
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> Add(UserAddRequestDto user)
         {
             await _userService.AddAsync(user);
-            return Ok("سلاممم");
+
+            string username = user.Name;
+
+            return Ok($" عزیز خوش آمدی{username} ");
+
+
         }
+
+
+        [Authorize()]
         [HttpPut]
         public async Task<IActionResult> Edit([FromBody] AppUser user)
         {
             await _userService.EditAsync(user);
             return Ok();
         }
+
+
+        [Authorize(Roles = "Admin")]
         [HttpDelete]
         public async Task<IActionResult> Delete(string id)
         {
             await _userService.DeleteAsync(id);
+
             return Ok("خداحافظ...");
         }
     }
